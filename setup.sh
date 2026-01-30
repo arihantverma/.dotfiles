@@ -52,11 +52,14 @@ fi
 echo "==> Backing up existing configs..."
 [ -f "$HOME/.zshrc" ] && [ ! -L "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.bak"
 [ -d "$HOME/.config/nvim" ] && [ ! -L "$HOME/.config/nvim" ] && mv "$HOME/.config/nvim" "$HOME/.config/nvim.bak"
+GHOSTTY_CONFIG="$HOME/Library/Application Support/com.mitchellh.ghostty/config"
+[ -f "$GHOSTTY_CONFIG" ] && [ ! -L "$GHOSTTY_CONFIG" ] && mv "$GHOSTTY_CONFIG" "$GHOSTTY_CONFIG.bak"
 
 # Stow dotfiles
 echo "==> Stowing dotfiles..."
 cd "$(dirname "$0")"
 stow -t ~ nvim
 stow -t ~ zsh
+stow -t ~ ghostty
 
 echo "==> Done! Restart your terminal or run: source ~/.zshrc"
