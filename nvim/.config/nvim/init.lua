@@ -31,6 +31,25 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 --------------------------------------------------------------------------------
+-- LEADER KEY
+-- Must be set before loading keymaps or plugins that use <leader>
+--------------------------------------------------------------------------------
+-- mapleader: The global leader key used for custom keymaps across all files.
+-- When you define a keymap with <leader>, it uses this key as the prefix.
+-- Example: <leader>y becomes Space+y when mapleader is set to Space.
+-- Default is backslash (\), but Space is popular because it's easy to reach.
+vim.g.mapleader = ' '
+
+-- maplocalleader: A separate leader key for buffer-local or filetype-specific
+-- keymaps. Plugins for specific languages often use <localleader> so their
+-- shortcuts don't conflict with your global <leader> mappings.
+-- Example: A Python plugin might use <localleader>r to run the current file,
+-- while your global <leader>r does something else entirely.
+-- Setting it to Space keeps things simple (one key to remember).
+-- Some people prefer a different key (like comma) to keep them distinct.
+vim.g.maplocalleader = ' '
+
+--------------------------------------------------------------------------------
 -- USER CONFIGURATION
 -- Your personal settings split into separate files for organization
 --------------------------------------------------------------------------------
