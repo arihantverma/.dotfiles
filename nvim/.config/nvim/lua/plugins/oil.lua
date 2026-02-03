@@ -3,10 +3,8 @@
 return {
   "stevearc/oil.nvim",
   dependencies = { "echasnovski/mini.icons" },
-  keys = {
-    -- Open oil in the directory of the current file
-    { "-", "<cmd>Oil<cr>", desc = "Open file explorer" },
-  },
+  -- Oil must load at startup to disable netrw and claim the `-` keymap
+  lazy = false,
   config = function()
     require("oil").setup({
       -- Use mini.icons for file icons (already installed)
@@ -20,5 +18,6 @@ return {
       -- <CR> : open file/directory
       -- g? : show help
     })
+    vim.keymap.set("n", "-", "<cmd>Oil<cr>", { desc = "Open file explorer" })
   end,
 }
