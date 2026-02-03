@@ -30,27 +30,28 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
 
-    -- build: runs after the plugin is installed/updated
-    -- This updates all installed language parsers
-    build = function()
-      require("nvim-treesitter.install").update({ with_sync = true })()
-    end,
-
-    -- config: runs when the plugin loads
     config = function()
-      -- pcall = "protected call", won't crash if module not found
-      local ok, configs = pcall(require, "nvim-treesitter.configs")
-      if ok then
-        configs.setup({
-          -- Parsers to auto-install. Add more languages as needed:
-          -- e.g., "lua", "javascript", "typescript", "python", "rust", "go"
-          ensure_installed = { "markdown", "markdown_inline" },
+      local parsers = {
+        "markdown", "markdown_inline",
+        "html", "css",
+        "javascript", "typescript", "tsx",
+        "json",
+        "lua",
+      }
+      require("nvim-treesitter").install(parsers)
 
-          -- Enable treesitter-based syntax highlighting
-          -- This is more accurate than Neovim's default regex-based highlighting
-          highlight = { enable = true },
-        })
-      end
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = {
+          "markdown", "markdown_inline",
+          "html", "css",
+          "javascript", "typescript", "typescriptreact",
+          "json", "jsonc",
+          "lua",
+        },
+        callback = function()
+          vim.treesitter.start()
+        end,
+      })
     end,
   },
 

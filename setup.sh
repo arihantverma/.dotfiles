@@ -48,6 +48,14 @@ else
     echo "==> zsh-syntax-highlighting already installed"
 fi
 
+# Install Node.js (required by mason.nvim for LSP servers)
+if ! command -v node &> /dev/null; then
+    echo "==> Installing Node.js..."
+    brew install node
+else
+    echo "==> Node.js already installed"
+fi
+
 # Install Neovim Telescope dependencies (fd for file finding, ripgrep for text search)
 echo "==> Installing Telescope dependencies..."
 brew install fd ripgrep

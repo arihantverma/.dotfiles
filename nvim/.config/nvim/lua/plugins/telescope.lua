@@ -2,7 +2,6 @@
 -- Press <leader>ff to find files, <leader>fg to search text
 return {
   "nvim-telescope/telescope.nvim",
-  branch = "0.1.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
     -- Faster fuzzy matching (optional but recommended)

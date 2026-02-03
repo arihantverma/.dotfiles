@@ -23,7 +23,13 @@ vim.opt.termguicolors = false
 --------------------------------------------------------------------------------
 -- vim.opt.number = true         -- Show line numbers
 -- vim.opt.relativenumber = true -- Relative line numbers
--- vim.opt.tabstop = 2           -- Tab width
--- vim.opt.shiftwidth = 2        -- Indent width
--- vim.opt.expandtab = true      -- Use spaces instead of tabs
+vim.opt.tabstop = 2           -- Tab width
+vim.opt.shiftwidth = 2        -- Indent width
+vim.opt.expandtab = true      -- Use spaces instead of tabs
 -- vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
+
+--------------------------------------------------------------------------------
+-- LSP
+--------------------------------------------------------------------------------
+vim.opt.signcolumn = "yes"    -- Always show sign column (prevents layout shift from diagnostics)
+vim.opt.updatetime = 250      -- Faster CursorHold for LSP features (default 4000ms)
