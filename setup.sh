@@ -48,6 +48,10 @@ else
     echo "==> zsh-syntax-highlighting already installed"
 fi
 
+# Install Neovim Telescope dependencies (fd for file finding, ripgrep for text search)
+echo "==> Installing Telescope dependencies..."
+brew install fd ripgrep
+
 # Back up existing configs if they exist and aren't symlinks
 echo "==> Backing up existing configs..."
 [ -f "$HOME/.zshrc" ] && [ ! -L "$HOME/.zshrc" ] && mv "$HOME/.zshrc" "$HOME/.zshrc.bak"
