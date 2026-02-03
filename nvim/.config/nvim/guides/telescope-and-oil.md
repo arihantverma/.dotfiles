@@ -48,8 +48,31 @@ knowing exact paths. Just press a keybinding and start typing.
 
 ### Switching Buffers
 
-`<Space>fb` shows all open buffers (files you've opened in this session).
-Useful for jumping between files you're actively working on.
+A **buffer** is an in-memory copy of a file you've opened. Every time you
+open a file — via Telescope, oil, `:e`, or any other method — Neovim creates
+a buffer for it. When you navigate away to another file, the previous buffer
+stays open in the background. Think of buffers as browser tabs you can't see.
+
+`<Space>fb` opens Telescope showing all your open buffers so you can jump
+between them instantly.
+
+**Example workflow:**
+
+1. You open `init.lua` — buffer 1
+2. Press `<Space>ff`, open `keymaps.lua` — buffer 2 (`init.lua` is still open)
+3. Open `options.lua` via oil — buffer 3
+4. Press `<Space>fb` — all three files appear in the list
+5. Type "init", press Enter — you're back in `init.lua`
+
+This is faster than `<Space>ff` for files you've already opened because the
+list only contains your active files, not every file in the project.
+
+**Useful buffer commands:**
+
+| Command | Action                              |
+| ------- | ----------------------------------- |
+| `:ls`   | List all open buffers               |
+| `:bd`   | Close (delete) the current buffer   |
 
 ---
 
