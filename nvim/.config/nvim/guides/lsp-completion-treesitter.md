@@ -478,10 +478,22 @@ These keymaps are provided by Neovim itself — no plugin config needed:
 | `gd`        | **Go to definition** — jump to where a function/variable is defined |
 | `gD`        | **Go to declaration** — jump to where a symbol is declared (less common) |
 | `grr`       | **Go to references** — list all places this symbol is used |
+| `gri`       | **Go to implementation** — jump to the implementation of an interface/abstract method |
+| `gO`        | **Document symbols** — list all symbols (functions, variables, types) in the current file |
 | `grn`       | **Rename** — rename a symbol across all files |
 | `gra`       | **Code action** — show available fixes/refactors (e.g., "add missing import") |
 | `K`         | **Hover** — show type info / documentation in a floating window |
 | `<C-s>`     | **Signature help** — show function parameters (in insert mode) |
+
+### Navigation — Jump Back/Forward
+
+After using `gd` or `grr` to jump somewhere, use these to navigate back:
+
+| Key         | Action                                      |
+| ----------- | ------------------------------------------- |
+| `<C-o>`     | **Jump back** — go back to where you were before the jump |
+| `<C-i>`     | **Jump forward** — go forward (undo a `<C-o>`) |
+| `<C-t>`     | **Tag jump back** — pop the tag stack (alternative to `<C-o>` after `gd`) |
 
 ### LSP — Custom (from our config)
 
