@@ -142,3 +142,8 @@ export EDITOR="code --wait"
 # aliases
 alias vim="nvim"
 alias stowlist='find ~ -maxdepth 3 -type l -lname "*dotfiles*" -exec ls -la {} \;'
+alias claw='claude --dangerously-skip-permissions'
+
+# ruby
+eval "$(rbenv init - --no-rehash zsh)"
+
