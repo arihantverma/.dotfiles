@@ -67,11 +67,16 @@ echo "==> Backing up existing configs..."
 GHOSTTY_CONFIG="$HOME/Library/Application Support/com.mitchellh.ghostty/config"
 [ -f "$GHOSTTY_CONFIG" ] && [ ! -L "$GHOSTTY_CONFIG" ] && mv "$GHOSTTY_CONFIG" "$GHOSTTY_CONFIG.bak"
 
+# Ensure Karabiner complex_modifications directory exists (Karabiner creates it on first run,
+# but may not exist on a fresh machine before Karabiner has launched)
+mkdir -p "$HOME/.config/karabiner/assets/complex_modifications"
+
 # Stow dotfiles
 echo "==> Stowing dotfiles..."
 cd "$(dirname "$0")"
 stow -t ~ nvim
 stow -t ~ zsh
 stow -t ~ ghostty
+stow -t ~ karabiner
 
 echo "==> Done! Restart your terminal or run: source ~/.zshrc"

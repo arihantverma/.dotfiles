@@ -37,6 +37,7 @@ The `setup.sh` file is the bootstrap script for setting up these dotfiles on a n
 | `nvim/`    | `~/.config/nvim`                                             | Neovim configuration            | Neovim                                          |
 | `zsh/`     | `~/.zshrc`                                                   | Zsh shell configuration         | Oh My Zsh, Pure prompt, zsh-syntax-highlighting |
 | `ghostty/` | `~/Library/Application Support/com.mitchellh.ghostty/config` | Ghostty terminal config (macOS) | Ghostty terminal                                |
+| `karabiner/` | `~/.config/karabiner/assets/complex_modifications/`        | Karabiner-Elements complex modifications (Keychron Q1 hacker layout) | Karabiner-Elements |
 
 ## Adding a new config
 

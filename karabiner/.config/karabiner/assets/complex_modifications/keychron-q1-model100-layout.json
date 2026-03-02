@@ -1,0 +1,2184 @@
+{
+  "title": "Model 100 Hacker Layout for Keychron",
+  "rules": [
+    {
+      "description": "Caps Lock recovery: Left Shift + Caps Lock = real Caps Lock toggle",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "mandatory": [
+                "left_shift"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "caps_lock"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Combos: J+K=Space, D+F=Backspace, S+D=Tab, K+L=Enter, F+G=Esc",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "j"
+              },
+              {
+                "key_code": "k"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "detect_key_down_uninterruptedly": true,
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "spacebar"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "variable_unless",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 50
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "d"
+              },
+              {
+                "key_code": "f"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "detect_key_down_uninterruptedly": true,
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "variable_unless",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 50
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "s"
+              },
+              {
+                "key_code": "d"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "detect_key_down_uninterruptedly": true,
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "variable_unless",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 50
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "l"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "detect_key_down_uninterruptedly": true,
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "variable_unless",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 50
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "f"
+              },
+              {
+                "key_code": "g"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "detect_key_down_uninterruptedly": true,
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "escape"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "variable_unless",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 50
+          }
+        }
+      ]
+    },
+    {
+      "description": "Caps Lock = Layer 2 toggle (hold) / Esc (tap)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "layer2_active",
+                "value": 1
+              }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "escape"
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "layer2_active",
+                "value": 0
+              }
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 200
+          },
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Layer 2 — Arrows: D=←, F=↑, J=↓, K=→, A=line start, Q=line end (Vimium mapping)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "a"
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "q"
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d"
+          },
+          "to": [
+            {
+              "key_code": "left_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f"
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j"
+          },
+          "to": [
+            {
+              "key_code": "down_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k"
+          },
+          "to": [
+            {
+              "key_code": "right_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Layer 2 — Brackets: w=| e=( r=) s=[ c=] u={ i=} g=< h=> b=` v=\\",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "w"
+          },
+          "to": [
+            {
+              "key_code": "backslash",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "e"
+          },
+          "to": [
+            {
+              "key_code": "9",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "r"
+          },
+          "to": [
+            {
+              "key_code": "0",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "s"
+          },
+          "to": [
+            {
+              "key_code": "open_bracket"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "c"
+          },
+          "to": [
+            {
+              "key_code": "close_bracket"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "u"
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i"
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "g"
+          },
+          "to": [
+            {
+              "key_code": "comma",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h"
+          },
+          "to": [
+            {
+              "key_code": "period",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "b"
+          },
+          "to": [
+            {
+              "key_code": "grave_accent_and_tilde"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "v"
+          },
+          "to": [
+            {
+              "key_code": "backslash"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Layer 2 — Navigation: y=Home, t=PgUp, o=PgDn, p=End",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "y"
+          },
+          "to": [
+            {
+              "key_code": "home"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "t"
+          },
+          "to": [
+            {
+              "key_code": "page_up"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "o"
+          },
+          "to": [
+            {
+              "key_code": "page_down"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "p"
+          },
+          "to": [
+            {
+              "key_code": "end"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Layer 2 — Desktop switch: z=Ctrl+←, x=Ctrl+→",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "z"
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "x"
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Layer 2 — F-keys on number row (1=F1 ... 0=F10, -=F11, ==F12)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "1"
+          },
+          "to": [
+            {
+              "key_code": "f1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "2"
+          },
+          "to": [
+            {
+              "key_code": "f2"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "3"
+          },
+          "to": [
+            {
+              "key_code": "f3"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "4"
+          },
+          "to": [
+            {
+              "key_code": "f4"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "5"
+          },
+          "to": [
+            {
+              "key_code": "f5"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "6"
+          },
+          "to": [
+            {
+              "key_code": "f6"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "7"
+          },
+          "to": [
+            {
+              "key_code": "f7"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "8"
+          },
+          "to": [
+            {
+              "key_code": "f8"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "9"
+          },
+          "to": [
+            {
+              "key_code": "f9"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0"
+          },
+          "to": [
+            {
+              "key_code": "f10"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "hyphen"
+          },
+          "to": [
+            {
+              "key_code": "f11"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "equal_sign"
+          },
+          "to": [
+            {
+              "key_code": "f12"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Layer 2 — Dashes: l=hyphen, ;=en dash, '=em dash",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l"
+          },
+          "to": [
+            {
+              "key_code": "hyphen"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon"
+          },
+          "to": [
+            {
+              "key_code": "hyphen",
+              "modifiers": [
+                "left_option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "quote"
+          },
+          "to": [
+            {
+              "key_code": "hyphen",
+              "modifiers": [
+                "left_option",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Layer 2 — Selection macros: ,=←line .=←word /=word→ Return=line→",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "comma"
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "period"
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_option",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "slash"
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_option",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "return_or_enter"
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Layer 2 — Media: n=Mute, m=Vol-",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "n"
+          },
+          "to": [
+            {
+              "key_code": "mute"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m"
+          },
+          "to": [
+            {
+              "key_code": "volume_decrement"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Tab: hold = Modifier Layer (Layer 3) — S+D combo provides Tab character",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "mod_layer_active",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "mod_layer_active",
+                "value": 0
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "layer2_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Layer 3 — Direct Cmd shortcuts + one-shot modifiers",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "c"
+          },
+          "to": [
+            {
+              "key_code": "c",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "v"
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "x"
+          },
+          "to": [
+            {
+              "key_code": "x",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "s"
+          },
+          "to": [
+            {
+              "key_code": "s",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f"
+          },
+          "to": [
+            {
+              "key_code": "f",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "t"
+          },
+          "to": [
+            {
+              "key_code": "t",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "w"
+          },
+          "to": [
+            {
+              "key_code": "w",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "u"
+          },
+          "to": [
+            {
+              "key_code": "z",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "r"
+          },
+          "to": [
+            {
+              "key_code": "z",
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "return_or_enter"
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar"
+          },
+          "to": [
+            {
+              "key_code": "spacebar",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "a"
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j"
+          },
+          "to": [
+            {
+              "sticky_modifier": {
+                "left_command": "toggle"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k"
+          },
+          "to": [
+            {
+              "sticky_modifier": {
+                "left_control": "toggle"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l"
+          },
+          "to": [
+            {
+              "sticky_modifier": {
+                "left_option": "toggle"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon"
+          },
+          "to": [
+            {
+              "sticky_modifier": {
+                "left_shift": "toggle"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h"
+          },
+          "to": [
+            {
+              "sticky_modifier": {
+                "left_command": "toggle"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "left_shift": "toggle"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
