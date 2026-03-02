@@ -29,7 +29,7 @@
 
 ---
 
-## Layer 3: Hold Tab
+## Layer 3: Tab (tap=Tab, hold=Layer 3)
 
 ### Tier 1 — Direct Cmd shortcuts (2 steps: hold Tab + press)
 
@@ -57,6 +57,8 @@
 | L | ⌥ Alt/Option |
 | `;` | ⇧ Shift |
 | H | ⌘⇧ Cmd+Shift (both armed atomically — use this instead of stacking J+`;`) |
+| N | ⌘⌥ Cmd+Option (both armed atomically) |
+| M | ⌃⌘ Ctrl+Cmd (both armed atomically) |
 
 **Capitalize:** hold Tab → tap `;` (arms Shift) → release Tab → type letter
 
@@ -118,12 +120,21 @@
 | Cmd+Shift+K (delete line VS Code) | Hold Tab → H → release Tab → K |
 | Cmd+Shift+F (global find) | Hold Tab → H → release Tab → F |
 | Ctrl+C (terminal kill) | Hold Tab → tap K → release Tab → C |
+| Cmd+Option + any key | Hold Tab → tap N → release Tab → key |
+| Cmd+Option+I (DevTools) | Hold Tab → N → release Tab → I |
+| Ctrl+Cmd + any key | Hold Tab → tap M → release Tab → key |
+| Ctrl+Cmd+F (fullscreen) | Hold Tab → M → release Tab → F |
+
+### Tab key
+
+| What you want | Keystrokes |
+|---------------|------------|
+| Tab character | Tap Tab alone (or S + D simultaneously as backup) |
 
 ### Combos (base layer)
 
 | What you want | Keystrokes |
 |---------------|------------|
-| Tab character | S + D simultaneously |
 | Backspace | D + F simultaneously |
 | Escape | F + G simultaneously |
 | Space | J + K simultaneously |

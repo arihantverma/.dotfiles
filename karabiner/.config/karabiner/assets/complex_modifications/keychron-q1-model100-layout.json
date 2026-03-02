@@ -84,7 +84,7 @@
             }
           ],
           "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 50
+            "basic.simultaneous_threshold_milliseconds": 70
           }
         },
         {
@@ -132,7 +132,7 @@
             }
           ],
           "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 50
+            "basic.simultaneous_threshold_milliseconds": 70
           }
         },
         {
@@ -180,7 +180,7 @@
             }
           ],
           "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 50
+            "basic.simultaneous_threshold_milliseconds": 70
           }
         },
         {
@@ -228,7 +228,7 @@
             }
           ],
           "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 50
+            "basic.simultaneous_threshold_milliseconds": 70
           }
         },
         {
@@ -276,7 +276,7 @@
             }
           ],
           "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 50
+            "basic.simultaneous_threshold_milliseconds": 70
           }
         }
       ]
@@ -1617,7 +1617,7 @@
       ]
     },
     {
-      "description": "Tab: hold = Modifier Layer (Layer 3) — S+D combo provides Tab character",
+      "description": "Tab: tap=Tab, hold=Layer 3 (modifier layer)",
       "manipulators": [
         {
           "type": "basic",
@@ -1660,7 +1660,15 @@
                 }
               ]
             }
-          ]
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "tab"
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 200
+          }
         }
       ]
     },
@@ -2158,6 +2166,74 @@
             {
               "sticky_modifier": {
                 "left_shift": "toggle"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "n"
+          },
+          "to": [
+            {
+              "sticky_modifier": {
+                "left_command": "toggle"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "left_option": "toggle"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mod_layer_active",
+              "value": 1
+            },
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m"
+          },
+          "to": [
+            {
+              "sticky_modifier": {
+                "left_control": "toggle"
+              }
+            },
+            {
+              "sticky_modifier": {
+                "left_command": "toggle"
               }
             }
           ],
