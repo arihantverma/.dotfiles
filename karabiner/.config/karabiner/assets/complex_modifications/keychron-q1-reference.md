@@ -1,303 +1,159 @@
 # Keychron Q1 — Model 100 Hacker Layout Reference (Simlayer Edition)
 
-All layer triggers are **letter keys** — fully portable to the Keyboardio Model 100.
-
----
+All triggers are letter-first simlayers unless noted otherwise.
 
 ## How simlayers work
 
-Press the **trigger letter first**, then the target key within **80 ms** while
-the trigger is still held down. If you tap the trigger alone (or release it
-before pressing a second key), it types the normal letter.
+Press the trigger key first, keep it held, then press the target key.
 
-> **Example:** E → C (press E, hold it, press C) → Cmd+C (Copy)
-> **Typing normally:** press and release E → types "e"
+- Standard simlayer threshold: `50ms`
+- Base home-row combos use `70ms`
 
----
+If you tap the trigger key alone, it types the normal letter.
 
-## Combos (home row, order-insensitive, 70 ms)
+## Base combos (order-insensitive, 70ms)
 
-Press both keys simultaneously within 70 ms.
+- `H + J` -> `Tab`
+- `J + K` -> `Space`
+- `D + F` -> `Backspace`
+- `K + L` -> `Enter`
+- `F + G` -> `Escape`
 
-```
-Left hand:                    Right hand:
-  D + F  = Backspace            H + J  = Tab
-  F + G  = Escape               J + K  = Space
-                                K + L  = Enter
-```
+## Caps Lock
 
-Right-hand chain: **H+J=Tab → J+K=Space → K+L=Enter**
+- Tap `Caps Lock` -> `Escape`
+- Hold `Caps Lock` -> `Command`
+- `Left Shift + Caps Lock` -> real Caps Lock toggle
+- `Right Shift + Caps Lock` -> real Caps Lock toggle
 
----
+## Simlayer: S = Navigation Kernel
 
-## Caps Lock key
+Navigation/editing lives here, plus Phase 1 edit aliases.
 
-| Action | Result |
-|--------|--------|
-| Tap alone | Escape |
-| Left Shift + Caps Lock | Toggle real Caps Lock |
-| Right Shift + Caps Lock | Toggle real Caps Lock |
+| Key | Output |
+|---|---|
+| `S + D` | Left arrow |
+| `S + F` | Up arrow |
+| `S + J` | Down arrow |
+| `S + K` | Right arrow |
+| `S + E` | Tab |
+| `S + R` | Shift + Tab |
+| `S + U` | Cmd + Z (Undo) |
+| `S + I` | Cmd + Shift + Z (Redo) |
+| `S + A` | Cmd + Left (line start) |
+| `S + Q` | Cmd + Right (line end) |
+| `S + H` | Option + Left (move one word left) |
+| `S + L` | Option + Right (move one word right) |
+| `S + ,` | Option + Shift + Left (select word left) |
+| `S + .` | Option + Shift + Right (select word right) |
+| `S + /` | Cmd + Shift + Left (select to line start) |
+| `S + Return` | Cmd + Shift + Right (select to line end) |
+| `S + Y` | Home |
+| `S + T` | Page Up |
+| `S + O` | Page Down |
+| `S + P` | End |
+| `S + N` | Ctrl + Left (desktop left) |
+| `S + M` | Ctrl + Right (desktop right) |
+| `S + Space` | Cmd + Space (launcher) |
 
----
+## Simlayer: R = Symbols + F-keys
 
-## Simlayer: S = Navigation
+Symbols moved out of `S` to keep navigation clean.
 
-Hold **S** first, then press the target key.
+### Symbols
 
-### Arrows (Vimium-style)
+Phase 1 keeps multiple aliases during transition.
 
-| S + | Output |
-|-----|--------|
-| D | ← Left arrow |
-| F | ↑ Up arrow |
-| J | ↓ Down arrow |
-| K | → Right arrow |
-| A | Cmd+← (line start) |
-| Q | Cmd+→ (line end) |
+| Key | Output |
+|---|---|
+| `R + W` | `|` |
+| `R + E` | `(` |
+| `R + J` | `(` |
+| `R + T` | `)` |
+| `R + K` | `)` |
+| `R + S` | `[` |
+| `R + D` | `]` |
+| `R + U` | `[` |
+| `R + I` | `]` |
+| `R + O` | `{` |
+| `R + P` | `}` |
+| `R + G` | `<` |
+| `R + N` | `<` |
+| `R + M` | `>` |
+| `R + H` | `` ` `` |
+| `R + B` | `` ` `` |
+| `R + V` | `\` |
+| `R + ,` | `\` |
+| `R + .` | `|` |
+| `R + L` | `-` |
+| `R + ;` | `–` (en dash) |
+| `R + '` | `—` (em dash) |
 
-### Brackets & Symbols
+### F-keys
 
-| S + | Output | S + | Output |
-|-----|--------|-----|--------|
-| E | ( | R | ) |
-| U | { | I | } |
-| C | ] | W | \| |
-| G | < | H | > |
-| B | ` | V | \\ |
-
-### Page Navigation
-
-| S + | Output |
-|-----|--------|
-| Y | Home |
-| T | Page Up |
-| O | Page Down |
-| P | End |
-
-### Desktop Switching
-
-| S + | Output |
-|-----|--------|
-| Z | Ctrl+← (desktop left) |
-| X | Ctrl+→ (desktop right) |
-
-### F-Keys (number row)
-
-| S + | Output | S + | Output |
-|-----|--------|-----|--------|
-| 1 | F1 | 6 | F6 |
-| 2 | F2 | 7 | F7 |
-| 3 | F3 | 8 | F8 |
-| 4 | F4 | 9 | F9 |
-| 5 | F5 | 0 | F10 |
-| - | F11 | = | F12 |
-
-### Dashes
-
-| S + | Output |
-|-----|--------|
-| L | - (hyphen) |
-| ; | – (en dash) |
-| ' | — (em dash) |
-
-### Selection Macros
-
-| S + | Output |
-|-----|--------|
-| , | Select to line start (Cmd+Shift+←) |
-| . | Select word left (Opt+Shift+←) |
-| / | Select word right (Opt+Shift+→) |
-| Return | Select to line end (Cmd+Shift+→) |
-
-### Media
-
-| S + | Output |
-|-----|--------|
-| N | Mute |
-| M | Volume down |
-
----
+| Key | Output | Key | Output |
+|---|---|---|---|
+| `R + 1` | F1 | `R + 7` | F7 |
+| `R + 2` | F2 | `R + 8` | F8 |
+| `R + 3` | F3 | `R + 9` | F9 |
+| `R + 4` | F4 | `R + 0` | F10 |
+| `R + 5` | F5 | `R + -` | F11 |
+| `R + 6` | F6 | `R + =` | F12 |
 
 ## Simlayer: E = Cmd
 
-Hold **E** first, then press any key → **Cmd + that key**.
+`E + key` -> `Cmd + key` for letters, numbers, punctuation, return, delete, space, tab, and escape.
 
-> **Cannot produce:** Cmd+E (self-reference). Remap Raycast emoji picker to
-> a different shortcut (e.g. Cmd+Y or Cmd+;).
+Common examples:
 
-### Key examples
-
-| E + | Output | Use |
-|-----|--------|-----|
-| A | Cmd+A | Select all |
-| C | Cmd+C | Copy |
-| V | Cmd+V | Paste |
-| X | Cmd+X | Cut |
-| S | Cmd+S | Save |
-| Z | Cmd+Z | Undo |
-| F | Cmd+F | Find |
-| T | Cmd+T | New tab |
-| W | Cmd+W | Close tab |
-| Q | Cmd+Q | Quit |
-| R | Cmd+R | Reload |
-| N | Cmd+N | New window |
-| [ | Cmd+[ | Back (browser) |
-| ] | Cmd+] | Forward (browser) |
-| Tab | Cmd+Tab | App switcher |
-| Space | Cmd+Space | Spotlight |
-| Return | Cmd+Return | (app-specific) |
-
----
+- `E + C` -> Copy
+- `E + V` -> Paste
+- `E + X` -> Cut
+- `E + S` -> Save
+- `E + F` -> Find
+- `E + L` -> Focus URL bar
+- `E + W` -> Close tab
+- `E + Tab` -> App switcher (one-shot)
 
 ## Simlayer: Q = Cmd+Shift
 
-Hold **Q** first, then press any key → **Cmd+Shift + that key**.
+`Q + key` -> `Cmd + Shift + key` passthrough layer.
 
-> Q is the rarest letter (0.1% frequency) — near-zero misfire risk.
+Common examples:
 
-### Key examples
+- `Q + P` -> Command palette
+- `Q + F` -> Global find
+- `Q + Z` -> Redo
 
-| Q + | Output | Use |
-|-----|--------|-----|
-| P | Cmd+Shift+P | VS Code command palette |
-| F | Cmd+Shift+F | Global find |
-| K | Cmd+Shift+K | Delete line (VS Code) |
-| Z | Cmd+Shift+Z | Redo |
-| T | Cmd+Shift+T | Reopen closed tab |
-| N | Cmd+Shift+N | New window (incognito) |
-| R | Cmd+Shift+R | Hard reload |
+## Simlayer: Z = Ctrl
 
----
+`Z + key` -> `Ctrl + key` passthrough layer.
 
-## Simlayer: A = Ctrl
+Common examples:
 
-Hold **A** first, then press any key → **Ctrl + that key**.
+- `Z + C` -> interrupt process
+- `Z + D` -> EOF
+- `Z + L` -> clear terminal
 
-> **Cannot produce:** Ctrl+A (self-reference). Use S+A (Cmd+←) as a substitute
-> for "go to line start" in most editors.
+## Simlayer: W = Focused Cmd+Option Arrows
 
-### Key examples
+This layer is intentionally trimmed.
 
-| A + | Output | Use |
-|-----|--------|-----|
-| C | Ctrl+C | Kill process (terminal) |
-| D | Ctrl+D | EOF / logout (terminal) |
-| L | Ctrl+L | Clear terminal |
-| K | Ctrl+K | Kill to end of line (readline) |
-| Z | Ctrl+Z | Suspend process |
-| Tab | Ctrl+Tab | VS Code: next open file |
+- `W + D` -> `Cmd + Option + Left`
+- `W + F` -> `Cmd + Option + Up`
+- `W + J` -> `Cmd + Option + Down`
+- `W + K` -> `Cmd + Option + Right`
 
----
+## Simlayer: X = Focused Ctrl+Cmd
 
-## Simlayer: W = Cmd+Option
+This layer is intentionally trimmed.
 
-Hold **W** first, then press any key → **Cmd+Option + that key**.
+- `X + F` -> `Ctrl + Cmd + F` (fullscreen)
+- `X + Space` -> `Ctrl + Cmd + Space` (emoji picker)
 
-> **D/F/J/K** are overridden to output **Cmd+Option+Arrows** for tab/file switching.
+## Quick reminders
 
-### Arrow overrides (tab & file navigation)
-
-| W + | Output | Use |
-|-----|--------|-----|
-| D | Cmd+Option+← | Browser: previous tab; VS Code: previous open file |
-| K | Cmd+Option+→ | Browser: next tab; VS Code: next open file |
-| F | Cmd+Option+↑ | (app-specific) |
-| J | Cmd+Option+↓ | (app-specific) |
-
-### Other key examples
-
-| W + | Output | Use |
-|-----|--------|-----|
-| I | Cmd+Option+I | DevTools (browser) |
-| H | Cmd+Option+H | Hide other windows |
-| Esc | Cmd+Option+Esc | Force Quit dialog |
-
----
-
-## Simlayer: X = Ctrl+Cmd
-
-Hold **X** first, then press any key → **Ctrl+Cmd + that key**.
-
-> X is 0.15% frequency — very low misfire risk.
-
-### Key examples
-
-| X + | Output | Use |
-|-----|--------|-----|
-| F | Ctrl+Cmd+F | Toggle fullscreen |
-| Space | Ctrl+Cmd+Space | Emoji picker (macOS) |
-
----
-
-## Examples
-
-### Common editing operations
-
-| Task | Keys |
-|------|------|
-| Copy | E → C |
-| Paste | E → V |
-| Cut | E → X |
-| Undo | E → Z |
-| Redo | Q → Z |
-| Save | E → S |
-| Select all | E → A |
-| Find | E → F |
-
-### Navigation
-
-| Task | Keys |
-|------|------|
-| Move left/right | S → D / S → K |
-| Move up/down | S → F / S → J |
-| Line start/end | S → A / S → Q |
-| Select word left | S → . |
-| Select word right | S → / |
-| Select to line start | S → , |
-| Select to line end | S → Return |
-| Page up/down | S → T / S → O |
-| Home/End | S → Y / S → P |
-
-### App & Tab operations
-
-| Task | Keys |
-|------|------|
-| New tab | E → T |
-| Close tab | E → W |
-| Reopen closed tab | Q → T |
-| Previous tab (browser) | W → D |
-| Next tab (browser) | W → K |
-| App switcher | E → Tab |
-| Quit app | E → Q |
-| Spotlight | E → Space |
-
-### VS Code
-
-| Task | Keys |
-|------|------|
-| Command palette | Q → P |
-| Global find | Q → F |
-| Delete line | Q → K |
-| Next open file | W → K |
-| Previous open file | W → D |
-| Switch file (history) | A → Tab |
-
-### Terminal
-
-| Task | Keys |
-|------|------|
-| Kill process | A → C |
-| Clear screen | A → L |
-| EOF / logout | A → D |
-| Suspend | A → Z |
-
-### Brackets (in S simlayer)
-
-| Task | Keys |
-|------|------|
-| ( ) | S → E / S → R |
-| { } | S → U / S → I |
-| [ ] | [ = physical key; ] = S → C |
-| < > | S → G / S → H |
-| ` | S → B |
-| \| | S → W |
+- If a shortcut is command-like, check `E` first.
+- If it is selection/movement, check `S`.
+- If it is symbol/F-key, check `R`.
+- For real app-switcher hold behavior, use Hold `Caps` + `Tab`.
