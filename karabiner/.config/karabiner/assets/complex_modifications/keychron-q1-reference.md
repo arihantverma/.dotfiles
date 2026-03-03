@@ -28,7 +28,7 @@ If you tap the trigger key alone, it types the normal letter.
 
 ## Simlayer: S = Navigation Kernel
 
-Navigation/editing lives here, plus Phase 1 edit aliases.
+Navigation and editing live here.
 
 | Key | Output |
 |---|---|
@@ -40,6 +40,9 @@ Navigation/editing lives here, plus Phase 1 edit aliases.
 | `S + R` | Shift + Tab |
 | `S + U` | Cmd + Z (Undo) |
 | `S + I` | Cmd + Shift + Z (Redo) |
+| `S + C` | Cmd + C (Copy) |
+| `S + V` | Cmd + V (Paste) |
+| `S + B` | Cmd + X (Cut) |
 | `S + A` | Cmd + Left (line start) |
 | `S + Q` | Cmd + Right (line end) |
 | `S + H` | Option + Left (move one word left) |
@@ -48,12 +51,15 @@ Navigation/editing lives here, plus Phase 1 edit aliases.
 | `S + .` | Option + Shift + Right (select word right) |
 | `S + /` | Cmd + Shift + Left (select to line start) |
 | `S + Return` | Cmd + Shift + Right (select to line end) |
+| `S + N` | Select current word (Opt+Left, then Opt+Shift+Right) |
+| `S + M` | Select current line (Cmd+Left, then Cmd+Shift+Right) |
+| `S + ;` | Cmd + Backspace (delete to line start) |
+| `S + '` | Forward Delete |
+| `S + G` | Shift + Enter |
 | `S + Y` | Home |
 | `S + T` | Page Up |
 | `S + O` | Page Down |
 | `S + P` | End |
-| `S + N` | Ctrl + Left (desktop left) |
-| `S + M` | Ctrl + Right (desktop right) |
 | `S + Space` | Cmd + Space (launcher) |
 
 ## Simlayer: R = Symbols + F-keys
@@ -62,27 +68,17 @@ Symbols moved out of `S` to keep navigation clean.
 
 ### Symbols
 
-Phase 1 keeps multiple aliases during transition.
-
 | Key | Output |
 |---|---|
-| `R + W` | `|` |
-| `R + E` | `(` |
 | `R + J` | `(` |
-| `R + T` | `)` |
 | `R + K` | `)` |
-| `R + S` | `[` |
-| `R + D` | `]` |
 | `R + U` | `[` |
 | `R + I` | `]` |
 | `R + O` | `{` |
 | `R + P` | `}` |
-| `R + G` | `<` |
 | `R + N` | `<` |
 | `R + M` | `>` |
 | `R + H` | `` ` `` |
-| `R + B` | `` ` `` |
-| `R + V` | `\` |
 | `R + ,` | `\` |
 | `R + .` | `|` |
 | `R + L` | `-` |
@@ -150,10 +146,17 @@ This layer is intentionally trimmed.
 
 - `X + F` -> `Ctrl + Cmd + F` (fullscreen)
 - `X + Space` -> `Ctrl + Cmd + Space` (emoji picker)
+- `X + J` -> `Ctrl + Left` (desktop left)
+- `X + K` -> `Ctrl + Right` (desktop right)
+
+## Future Option
+
+If needed later, we can add sticky one-shot behavior for `Shift` or `Cmd` using Karabiner `to.sticky_modifier`.
 
 ## Quick reminders
 
 - If a shortcut is command-like, check `E` first.
-- If it is selection/movement, check `S`.
-- If it is symbol/F-key, check `R`.
+- `S` is for navigation and editing.
+- `R` is symbols and F-keys.
+- Desktop switching moved to `X + J/K`.
 - For real app-switcher hold behavior, use Hold `Caps` + `Tab`.
