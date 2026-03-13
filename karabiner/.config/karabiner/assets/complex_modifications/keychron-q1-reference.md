@@ -99,6 +99,12 @@ Symbols moved out of `S` to keep navigation clean.
 
 `E + key` is mostly a `Cmd + key` layer, with a few custom remaps and blocked chords to reduce collisions during normal typing.
 
+Browser exception:
+
+- `E + D` is blocked in Safari, Chrome, Arc, Brave, and Firefox.
+- `E + N` is blocked in Safari, Chrome, Arc, Brave, and Firefox.
+- `E + R` is blocked in Safari, Chrome, Arc, Brave, and Firefox.
+
 Common examples:
 
 - `E + U` -> Select all

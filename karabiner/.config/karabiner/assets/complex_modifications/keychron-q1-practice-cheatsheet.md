@@ -44,7 +44,7 @@
 ## Modifier Layers
 | Layer | Behavior | Examples |
 |---|---|---|
-| `E` | Mostly `Cmd + key`, with a few remaps/blocks | `E+U` select all, `E+C` copy, `E+V` paste, `E+W` close tab, `E+L` focus URL, `E+Tab` app switch |
+| `E` | Mostly `Cmd + key`, with a few remaps/blocks | `E+U` select all, `E+C` copy, `E+V` paste, `E+W` close tab, `E+L` focus URL, `E+Tab` app switch, `E+D/E+N/E+R` blocked in browsers |
 | `Q` | `Cmd+Shift + key` passthrough | `Q+P` command palette, `Q+F` global find |
 | `Z` | `Ctrl + key` passthrough | `Z+C` interrupt, `Z+D` EOF, `Z+L` clear |
 
