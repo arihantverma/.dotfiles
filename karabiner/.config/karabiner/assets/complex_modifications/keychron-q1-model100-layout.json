@@ -3710,47 +3710,6 @@
                 "key_code": "e"
               },
               {
-                "key_code": "n"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "strict",
-              "key_up_order": "strict_inverse",
-              "detect_key_down_uninterruptedly": true,
-              "key_up_when": "any"
-            }
-          },
-          "to": [
-            {
-              "key_code": "n",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "device_if",
-              "identifiers": [
-                {
-                  "vendor_id": 13364,
-                  "product_id": 263
-                }
-              ]
-            }
-          ],
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 50
-          }
-        },
-        {
-          "type": "basic",
-          "from": {
-            "simultaneous": [
-              {
-                "key_code": "e"
-              },
-              {
                 "key_code": "o"
               }
             ],

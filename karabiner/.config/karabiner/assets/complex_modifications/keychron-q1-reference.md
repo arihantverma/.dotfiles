@@ -97,7 +97,7 @@ Symbols moved out of `S` to keep navigation clean.
 
 ## Simlayer: E = Cmd
 
-`E + key` -> `Cmd + key` for letters, numbers, punctuation, return, delete, space, tab, and escape.
+`E + key` is mostly a `Cmd + key` layer, with a few custom remaps and blocked chords to reduce collisions during normal typing.
 
 Common examples:
 
