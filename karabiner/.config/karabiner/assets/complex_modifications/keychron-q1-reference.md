@@ -102,6 +102,7 @@ Symbols moved out of `S` to keep navigation clean.
 
 Common examples:
 
+- `E + U` -> Select all
 - `E + C` -> Copy
 - `E + V` -> Paste
 - `E + X` -> Cut

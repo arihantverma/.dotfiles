@@ -2940,7 +2940,7 @@
           },
           "to": [
             {
-              "key_code": "a",
+              "key_code": "u",
               "modifiers": [
                 "left_command"
               ]
@@ -4375,7 +4375,7 @@
           },
           "to": [
             {
-              "key_code": "u",
+              "key_code": "a",
               "modifiers": [
                 "left_command"
               ]
