@@ -17,7 +17,7 @@
 | `S+Enter` | Select to line end |
 | `S+N` | Select current word |
 | `S+M` | Select current line |
-| `S+E/R` | Tab / Shift+Tab |
+| `S+R` | Shift+Tab |
 | `S+U/I` | Undo / Redo |
 | `S+C/V/B` | Copy / Paste / Cut |
 | `S+;` | Delete to line start |

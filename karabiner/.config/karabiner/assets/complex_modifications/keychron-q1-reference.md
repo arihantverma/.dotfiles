@@ -36,7 +36,6 @@ Navigation and editing live here.
 | `S + F` | Up arrow |
 | `S + J` | Down arrow |
 | `S + K` | Right arrow |
-| `S + E` | Tab |
 | `S + R` | Shift + Tab |
 | `S + U` | Cmd + Z (Undo) |
 | `S + I` | Cmd + Shift + Z (Redo) |
