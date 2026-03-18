@@ -9100,6 +9100,52 @@
       ]
     },
     {
+      "description": "Simlayer: C = Focused Option",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "c"
+              },
+              {
+                "key_code": "d"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "detect_key_down_uninterruptedly": true,
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "d",
+              "modifiers": [
+                "left_option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                }
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 50
+          }
+        }
+      ]
+    },
+    {
       "description": "Simlayer: X = Ctrl+Cmd",
       "manipulators": [
         {

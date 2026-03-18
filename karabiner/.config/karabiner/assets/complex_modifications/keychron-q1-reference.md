@@ -146,6 +146,12 @@ This layer is intentionally trimmed.
 - `W + J` -> `Cmd + Option + Down`
 - `W + K` -> `Cmd + Option + Right`
 
+## Simlayer: C = Focused Option
+
+This layer is additive, not a general passthrough.
+
+- `C + D` -> `Option + D`
+
 ## Simlayer: X = Focused Ctrl+Cmd
 
 This layer is intentionally trimmed.

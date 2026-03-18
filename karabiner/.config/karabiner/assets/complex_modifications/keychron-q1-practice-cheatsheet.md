@@ -52,6 +52,7 @@
 | Combo | Action |
 |---|---|
 | `W+D/F/J/K` | `Cmd+Opt+Left/Up/Down/Right` |
+| `C+D` | `Opt+D` |
 | `X+F` | Fullscreen (`Ctrl+Cmd+F`) |
 | `X+Space` | Emoji picker (`Ctrl+Cmd+Space`) |
 | `X+J/K` | Desktop left / right |
