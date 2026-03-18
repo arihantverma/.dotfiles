@@ -108,6 +108,7 @@ Browser exception:
 Common examples:
 
 - `E + U` -> Select all
+- `E + A` -> blocked
 - `E + C` -> Copy
 - `E + V` -> Paste
 - `E + X` -> Cut
@@ -125,6 +126,7 @@ Common examples:
 
 - `Q + P` -> Command palette
 - `Q + F` -> Global find
+- `Q + U` -> Underline / `Cmd + U`
 - `Q + Z` -> Redo
 
 ## Simlayer: Z = Ctrl

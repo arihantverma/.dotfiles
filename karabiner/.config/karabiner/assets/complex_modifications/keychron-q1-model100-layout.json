@@ -3061,10 +3061,7 @@
           },
           "to": [
             {
-              "key_code": "u",
-              "modifiers": [
-                "left_command"
-              ]
+              "key_code": "vk_none"
             }
           ],
           "conditions": [
@@ -6639,8 +6636,7 @@
             {
               "key_code": "u",
               "modifiers": [
-                "left_command",
-                "left_shift"
+                "left_command"
               ]
             }
           ],
