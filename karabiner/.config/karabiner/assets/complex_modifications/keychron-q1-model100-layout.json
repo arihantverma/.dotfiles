@@ -2764,8 +2764,7 @@
                 "^com\\.google\\.Chrome$",
                 "^company\\.thebrowser\\.Browser$",
                 "^com\\.brave\\.Browser$",
-                "^org\\.mozilla\\.firefox$",
-                "^com\\.literatureandlatte\\.scrivener3$"
+                "^org\\.mozilla\\.firefox$"
               ]
             }
           ],
@@ -2822,7 +2821,8 @@
                 "^com\\.google\\.Chrome$",
                 "^company\\.thebrowser\\.Browser$",
                 "^com\\.brave\\.Browser$",
-                "^org\\.mozilla\\.firefox$"
+                "^org\\.mozilla\\.firefox$",
+                "^com\\.literatureandlatte\\.scrivener3$"
               ]
             }
           ],
