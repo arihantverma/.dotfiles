@@ -1,4 +1,6 @@
-# Keychron Q1 — Model 100 Hacker Layout Reference (Simlayer Edition)
+# Keychron Q1 / Keyboardio Model 100 — Layout Reference (Simlayer Edition)
+
+Enabled on the Keychron Q1 and the Keyboardio Model 100 for testing.
 
 All triggers are letter-first simlayers unless noted otherwise.
 
@@ -102,13 +104,13 @@ Symbols moved out of `S` to keep navigation clean.
 Browser exception:
 
 - `E + D` is blocked in Safari, Chrome, Arc, Brave, and Firefox.
-- `E + N` is blocked in Safari, Chrome, Arc, Brave, and Firefox.
-- `E + R` is blocked in Safari, Chrome, Arc, Brave, and Firefox.
+- `E + N` is blocked in Safari, Chrome, Arc, Brave, Firefox, and Scrivener.
 
 Common examples:
 
 - `E + U` -> Select all
 - `E + A` -> blocked
+- `E + R` -> blocked
 - `E + C` -> Copy
 - `E + V` -> Paste
 - `E + X` -> Cut
