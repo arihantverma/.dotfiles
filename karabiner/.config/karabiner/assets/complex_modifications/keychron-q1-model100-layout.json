@@ -2890,6 +2890,114 @@
       ]
     },
     {
+      "description": "App-only block: E+W",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "e"
+              },
+              {
+                "key_code": "w"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "detect_key_down_uninterruptedly": true,
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                },
+                {
+                  "vendor_id": 13462,
+                  "product_id": 6
+                }
+              ]
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^org\\.standardnotes\\.standardnotes$",
+                "^com\\.literatureandlatte\\.scrivener3$"
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 50
+          }
+        }
+      ]
+    },
+    {
+      "description": "App-only block: E+R",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "e"
+              },
+              {
+                "key_code": "r"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "detect_key_down_uninterruptedly": true,
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                },
+                {
+                  "vendor_id": 13462,
+                  "product_id": 6
+                }
+              ]
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^org\\.standardnotes\\.standardnotes$",
+                "^com\\.literatureandlatte\\.scrivener3$"
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 50
+          }
+        }
+      ]
+    },
+    {
       "description": "Simlayer: E = Cmd",
       "manipulators": [
         {
