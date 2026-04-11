@@ -1,0 +1,19 @@
+{
+  "name": "karabiner-layout-source",
+  "private": true,
+  "version": "1.0.0",
+  "description": "TypeScript source-of-truth for the Karabiner Model 100 layout",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsx scripts/build.ts",
+    "verify": "tsx scripts/verify.ts",
+    "test": "npm run verify"
+  },
+  "dependencies": {
+    "karabiner.ts": "^1.36.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}
