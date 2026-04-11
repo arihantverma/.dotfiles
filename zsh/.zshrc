@@ -147,3 +147,6 @@ alias claw='claude --dangerously-skip-permissions'
 # ruby
 eval "$(rbenv init - --no-rehash zsh)"
 
+
+. "$HOME/.turso/env"
+
