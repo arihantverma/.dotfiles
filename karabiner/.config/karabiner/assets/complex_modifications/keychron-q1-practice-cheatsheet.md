@@ -1,7 +1,7 @@
 # Keychron Q1 Practice Cheatsheet (Current Config)
 
 ## Core Rules
-- Enabled on Keychron Q1 and Keyboardio Model 100 for testing; in Ghostty only `DF`, `JK`, and `KL` stay enabled
+- Enabled on Keychron Q1 and Keyboardio Model 100 for testing; in Ghostty `DF`, `JK`, `KL`, `S+D/F/J/K`, and approved `R` coding symbols stay enabled
 - `Caps`: tap `Esc`, hold `Cmd`
 - Simlayer use: hold trigger, then press target key
 - Simlayer timing: mostly `50ms`

@@ -144,6 +144,30 @@ const wMappings: Mapping[] = [
 
 const cMappings: Mapping[] = [['d', [keyEvent('d', ['left_option'])]]]
 
+
+const ghosttyNavMappings: Mapping[] = [
+  ['d', [keyEvent('left_arrow')]],
+  ['f', [keyEvent('up_arrow')]],
+  ['j', [keyEvent('down_arrow')]],
+  ['k', [keyEvent('right_arrow')]],
+]
+
+const ghosttySymbolMappings: Mapping[] = [
+  ['j', [keyEvent('9', ['left_shift'])]],
+  ['k', [keyEvent('0', ['left_shift'])]],
+  ['u', [keyEvent('open_bracket')]],
+  ['i', [keyEvent('close_bracket')]],
+  ['o', [keyEvent('open_bracket', ['left_shift'])]],
+  ['p', [keyEvent('close_bracket', ['left_shift'])]],
+  ['n', [keyEvent('comma', ['left_shift'])]],
+  ['m', [keyEvent('period', ['left_shift'])]],
+  ['comma', [keyEvent('backslash')]],
+  ['period', [keyEvent('backslash', ['left_shift'])]],
+  ['l', [keyEvent('hyphen')]],
+  ['semicolon', [keyEvent('hyphen', ['left_option'])]],
+  ['quote', [keyEvent('hyphen', ['left_option', 'left_shift'])]],
+]
+
 const xMappings: Mapping[] = [
   ['f', [keyEvent('f', ['left_control', 'left_command'])]],
   ['spacebar', [keyEvent('spacebar', ['left_control', 'left_command'])]],
@@ -163,12 +187,20 @@ function blockRule(description: string, trigger: string, key: string, apps: stri
   ])
 }
 
+function ghosttyLayerRule(description: string, trigger: string, mappings: Mapping[]): RuleBuilder {
+  return scopedRule(description, [ifApp(APPS.ghostty)], false).manipulators(
+    mappings.map(([key, to]) => simultaneousManipulator(trigger, key, to, SIMLAYER_THRESHOLD, STRICT_SIMULTANEOUS_OPTIONS)),
+  )
+}
+
 export const rules: RuleBuilder[] = [
   capsRecoveryRule,
   capsDualRoleRule,
   chatBlockRule,
   baseComboRule,
   ghosttyBaseComboRule,
+  ghosttyLayerRule('Ghostty-enabled navigation: S+D/F/J/K', 's', ghosttyNavMappings),
+  ghosttyLayerRule('Ghostty-enabled symbols: R brackets/operators', 'r', ghosttySymbolMappings),
   layerRule('Simlayer: S = Navigation', 's', sMappings),
   layerRule('Simlayer: R = Symbols/F-keys', 'r', rMappings),
   blockRule('Browser-only block: E+D', 'e', 'd', [...APPS.browsers]),

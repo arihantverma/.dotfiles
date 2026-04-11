@@ -11,10 +11,10 @@ const actual = JSON.parse(readFileSync(ASSET_PATH, 'utf8')) as typeof expected
 
 assert.equal(expected.title, TITLE)
 assert.deepEqual(actual, expected)
-assert.equal(actual.rules.length, 18)
+assert.equal(actual.rules.length, 20)
 
 const manipulators = actual.rules.flatMap((rule) => rule.manipulators)
-assert.equal(manipulators.length, 228)
+assert.equal(manipulators.length, 245)
 
 const deviceCondition = {
   type: 'device_if',
@@ -35,11 +35,13 @@ for (const manipulator of manipulators) {
   appScopedConditions += conditions.filter((condition) => condition.type === 'frontmost_application_if').length
 }
 
-assert.equal(appScopedConditions, 6)
-assert.equal(ghosttyExceptions, 3)
+assert.equal(appScopedConditions, 23)
+assert.equal(ghosttyExceptions, 20)
 assert(actual.rules.some((rule) => rule.description === 'Caps Lock dual-role: tap Esc, hold Cmd'))
 assert(actual.rules.some((rule) => rule.description === 'Combos: J+K=Space, D+F=Backspace, K+L=Enter, F+G=Esc'))
 assert(actual.rules.some((rule) => rule.description === 'Ghostty-enabled base combos: J+K, D+F, K+L'))
+assert(actual.rules.some((rule) => rule.description === 'Ghostty-enabled navigation: S+D/F/J/K'))
+assert(actual.rules.some((rule) => rule.description === 'Ghostty-enabled symbols: R brackets/operators'))
 assert(actual.rules.some((rule) => rule.description === 'Simlayer: S = Navigation'))
 assert(actual.rules.some((rule) => rule.description === 'Simlayer: R = Symbols/F-keys'))
 assert(actual.rules.some((rule) => rule.description === 'Simlayer: E = Cmd'))

@@ -34,7 +34,7 @@ This directory is the source-of-truth for the Model 100 Karabiner layout.
   - `C` = focused Option (`C+D -> Opt+D`)
   - `X` = focused Ctrl+Cmd
 - Devices: Keychron Q1 and Keyboardio Model 100
-- Ghostty: all custom rules stay excluded except the base combos `DF`, `JK`, and `KL`
+- Ghostty: all custom rules stay excluded except base combos `DF`, `JK`, `KL`, `S+D/F/J/K` arrows, and the approved `R` coding symbols/operators
 
 ## Required workflow after layout changes
 1. Edit `src/` files.

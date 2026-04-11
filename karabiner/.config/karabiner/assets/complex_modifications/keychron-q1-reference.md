@@ -1,6 +1,6 @@
 # Keychron Q1 / Keyboardio Model 100 — Layout Reference (Simlayer Edition)
 
-Enabled on the Keychron Q1 and the Keyboardio Model 100 for testing. In Ghostty, only `D + F`, `J + K`, and `K + L` remain enabled.
+Enabled on the Keychron Q1 and the Keyboardio Model 100 for testing. In Ghostty, `D + F`, `J + K`, `K + L`, `S + D/F/J/K`, and the approved `R` coding symbols remain enabled.
 
 All triggers are letter-first simlayers unless noted otherwise.
 
