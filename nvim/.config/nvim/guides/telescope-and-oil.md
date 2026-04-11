@@ -4,120 +4,105 @@
 
 These tools must be installed for Telescope to work:
 
-```
+```bash
 brew install fd ripgrep
 ```
 
-- **fd** — Fast file finder, used by `<Space>ff` (find files)
-- **ripgrep** — Fast text search, used by `<Space>fg` (live grep)
+- `fd` powers file finding for `<Space>ff`
+- `ripgrep` powers text search for `<Space>fg`
 
 ---
 
-## Telescope — Fuzzy Finder
+## Quick Reference
 
-Telescope lets you find files, search text, and navigate your project without
-knowing exact paths. Just press a keybinding and start typing.
+| Key         | Action |
+| ----------- | ------ |
+| `<Space>ff` | Find files by name |
+| `<Space>fg` | Search text in the project |
+| `<Space>fb` | Switch between open buffers |
+| `<Space>fh` | Search Neovim help |
+| `-`         | Open Oil in the current file's directory |
 
-### Keymaps
+If `which-key.nvim` is loaded, press `<Space>` and pause briefly to see these
+leader mappings in a popup.
 
-| Key          | Action                    |
-| ------------ | ------------------------- |
-| `<Space>ff`  | Find files by name        |
-| `<Space>fg`  | Search text across files  |
-| `<Space>fb`  | Switch between open buffers |
-| `<Space>fh`  | Search help documentation |
+---
 
-### How to Use
+## Telescope
 
-1. Press `<Space>ff` to open the file finder
-2. Start typing any part of the filename — Telescope fuzzy matches, so
-   `init` will find `init.lua`, `kmp` will find `keymaps.lua`
-3. Use `<C-j>` / `<C-k>` to move up and down the results list
+Telescope is the fast "jump to something" tool.
+
+### Find Files
+
+1. Press `<Space>ff`
+2. Type part of the filename
+3. Use `<C-j>` and `<C-k>` to move through the list
 4. Press `<Enter>` to open the selected file
 5. Press `<Esc>` to close Telescope
 
-### Searching Text with Live Grep
+Examples:
 
-`<Space>fg` opens a live grep search powered by ripgrep.
+- `init` will find `init.lua`
+- `keym` will find `keymaps.lua`
 
-1. Type the text you're looking for
-2. Results update in real time as you type
-3. Navigate and open results the same way as file finder
+### Search Text
 
-> Requires ripgrep (see Prerequisites above).
+`<Space>fg` opens a live text search across the project.
 
-### Switching Buffers
+1. Press `<Space>fg`
+2. Type the text you want to find
+3. Move through results with `<C-j>` and `<C-k>`
+4. Press `<Enter>` to jump to the selected match
 
-A **buffer** is an in-memory copy of a file you've opened. Every time you
-open a file — via Telescope, oil, `:e`, or any other method — Neovim creates
-a buffer for it. When you navigate away to another file, the previous buffer
-stays open in the background. Think of buffers as browser tabs you can't see.
+### Buffers
 
-`<Space>fb` opens Telescope showing all your open buffers so you can jump
-between them instantly.
+A buffer is an open file in memory. Buffers stay open even when you switch to a
+different file.
 
-**Example workflow:**
+Use `<Space>fb` to jump between files you already opened.
 
-1. You open `init.lua` — buffer 1
-2. Press `<Space>ff`, open `keymaps.lua` — buffer 2 (`init.lua` is still open)
-3. Open `options.lua` via oil — buffer 3
-4. Press `<Space>fb` — all three files appear in the list
-5. Type "init", press Enter — you're back in `init.lua`
+Useful commands:
 
-This is faster than `<Space>ff` for files you've already opened because the
-list only contains your active files, not every file in the project.
-
-**Useful buffer commands:**
-
-| Command | Action                              |
-| ------- | ----------------------------------- |
-| `:ls`   | List all open buffers               |
-| `:bd`   | Close (delete) the current buffer   |
+| Command | Action |
+| ------- | ------ |
+| `:ls`   | List open buffers |
+| `:bd`   | Close the current buffer |
 
 ---
 
-## Oil.nvim — File Explorer
+## Oil.nvim
 
-Oil shows your filesystem as a regular Neovim buffer. You navigate it with
-the same keys you use to move around in any file.
+Oil is your file explorer. It shows a directory as a normal editable buffer.
 
-### Opening Oil
+### Basic Navigation
 
-| Key | Action                                    |
-| --- | ----------------------------------------- |
-| `-` | Open file explorer in current file's directory |
+| Key       | Action |
+| --------- | ------ |
+| `-`       | Open Oil from the current file, or go to the parent directory when already inside Oil |
+| `j` / `k` | Move down / up |
+| `<Enter>` | Open a file or enter a directory |
+| `g?`      | Show Oil help |
+| `g.`      | Toggle hidden files |
 
-### Navigating Inside Oil
+### Editing Files and Folders
 
-| Key       | Action                          |
-| --------- | ------------------------------- |
-| `j` / `k` | Move down / up through files   |
-| `<Enter>` | Open file or enter directory    |
-| `-`       | Go up to parent directory       |
-| `g?`      | Show all oil keybindings (help) |
+Inside an Oil buffer, the file list is editable text.
 
-### Editing the Filesystem
+- Rename a file by editing its name
+- Delete a file by deleting its line with `dd`
+- Create a file by adding a new line with a filename
+- Create a directory by adding a new line ending in `/`
 
-Oil treats the file listing as editable text. You can:
-
-- **Rename** a file by editing its name in the buffer
-- **Delete** a file by deleting its line (`dd`)
-- **Create** a file by adding a new line with a filename
-- **Create** a directory by adding a line ending with `/`
-
-After making changes, save with `:w` and Oil will prompt you to confirm
-the operations before applying them.
-
-### Hidden Files
-
-Oil is configured to show hidden files (dotfiles) by default. You can
-toggle this with `g.` inside an Oil buffer.
+After editing the listing, save with `:w` and Oil will ask you to confirm the
+changes before applying them.
 
 ---
 
 ## Suggested Workflow
 
-1. Use `<Space>ff` when you know roughly what file you want
-2. Use `<Space>fg` when you know what text is in the file but not the filename
-3. Use `<Space>fb` to jump between files you already have open
-4. Use `-` when you want to browse a directory or manage files (rename, delete, create)
+Use this mental model:
+
+- Use `<Space>ff` when you roughly know the filename
+- Use `<Space>fg` when you know the text but not the filename
+- Use `<Space>fb` when the file is already open
+- Use `-` when you want to browse directories or rename/create/delete files

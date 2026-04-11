@@ -4,8 +4,7 @@
 --
 -- nvim-ts-autotag: Type <div>, get </div> automatically. Also renames
 --   matching tags when you edit one.
--- nvim-autopairs: Auto-close brackets, quotes, parens. Integrated with
---   nvim-cmp so confirming a completion like `console.log` adds `()`.
+-- nvim-autopairs: Auto-close brackets, quotes, and parens while typing.
 --------------------------------------------------------------------------------
 
 return {
