@@ -35,6 +35,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ]
         },
@@ -68,6 +74,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ]
@@ -115,8 +127,76 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "description": "Chat-app block: K+L",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "k"
+              },
+              {
+                "key_code": "l"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "insensitive",
+              "key_up_order": "insensitive",
+              "detect_key_down_uninterruptedly": true,
+              "key_up_when": "any"
+            }
+          },
+          "to": [
+            {
+              "key_code": "vk_none"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 13364,
+                  "product_id": 263
+                },
+                {
+                  "vendor_id": 13462,
+                  "product_id": 6
+                }
+              ]
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.automattic\\.beeper\\.desktop$",
+                "^net\\.whatsapp\\.WhatsApp$",
+                "^org\\.whispersystems\\.signal-desktop$",
+                "^com\\.openai\\.codex$"
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
+            }
+          ],
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 70
+          }
         }
       ]
     },
@@ -158,6 +238,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -201,6 +287,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -242,6 +334,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -285,6 +383,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -326,6 +430,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -374,6 +484,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -415,6 +531,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -458,6 +580,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -499,6 +627,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -545,6 +679,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -589,6 +729,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -636,6 +782,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -680,6 +832,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -726,6 +884,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -771,6 +935,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -815,6 +985,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -862,6 +1038,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -907,6 +1089,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -954,6 +1142,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -1000,6 +1194,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -1041,6 +1241,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -1084,6 +1290,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -1126,6 +1338,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -1167,6 +1385,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -1213,6 +1437,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -1257,6 +1487,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -1303,6 +1539,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -1347,6 +1589,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -1400,6 +1648,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -1452,6 +1706,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -1497,6 +1757,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -1538,6 +1804,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -1583,6 +1855,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -1631,6 +1909,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -1672,6 +1956,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -1715,6 +2005,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -1756,6 +2052,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -1799,6 +2101,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -1840,6 +2148,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -1883,6 +2197,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -1924,6 +2244,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -1967,6 +2293,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -2008,6 +2340,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -2051,6 +2389,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -2092,6 +2436,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -2138,6 +2488,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -2183,6 +2539,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -2225,6 +2587,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -2266,6 +2634,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -2312,6 +2686,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -2356,6 +2736,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -2402,6 +2788,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -2447,6 +2839,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -2489,6 +2887,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -2530,6 +2934,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -2576,6 +2986,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -2617,6 +3033,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -2663,6 +3085,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -2708,6 +3136,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -2765,6 +3199,12 @@
                 "^company\\.thebrowser\\.Browser$",
                 "^com\\.brave\\.Browser$",
                 "^org\\.mozilla\\.firefox$"
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -2824,6 +3264,12 @@
                 "^org\\.mozilla\\.firefox$",
                 "^com\\.literatureandlatte\\.scrivener3$"
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -2881,6 +3327,12 @@
                 "^com\\.brave\\.Browser$",
                 "^org\\.mozilla\\.firefox$"
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -2934,6 +3386,12 @@
               "bundle_identifiers": [
                 "^org\\.standardnotes\\.standardnotes$",
                 "^com\\.literatureandlatte\\.scrivener3$"
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -2989,6 +3447,12 @@
                 "^org\\.standardnotes\\.standardnotes$",
                 "^com\\.literatureandlatte\\.scrivener3$"
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -3039,6 +3503,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -3083,6 +3553,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -3129,6 +3605,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -3173,6 +3655,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -3219,6 +3707,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -3263,6 +3757,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -3309,6 +3809,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -3353,6 +3859,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -3399,6 +3911,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -3444,6 +3962,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -3485,6 +4009,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -3531,6 +4061,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -3575,6 +4111,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -3621,6 +4163,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -3665,6 +4213,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -3711,6 +4265,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -3755,6 +4315,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -3801,6 +4367,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -3845,6 +4417,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -3891,6 +4469,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -3935,6 +4519,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -3981,6 +4571,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -4025,6 +4621,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -4071,6 +4673,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -4115,6 +4723,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -4161,6 +4775,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -4205,6 +4825,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -4251,6 +4877,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -4295,6 +4927,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -4341,6 +4979,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -4385,6 +5029,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -4431,6 +5081,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -4475,6 +5131,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -4521,6 +5183,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -4565,6 +5233,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -4611,6 +5285,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -4656,6 +5336,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -4682,10 +5368,7 @@
           },
           "to": [
             {
-              "key_code": "r",
-              "modifiers": [
-                "left_command"
-              ]
+              "key_code": "vk_none"
             }
           ],
           "conditions": [
@@ -4700,6 +5383,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -4746,6 +5435,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -4790,6 +5485,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -4836,6 +5537,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -4880,6 +5587,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -4926,6 +5639,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -4970,6 +5689,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -5016,6 +5741,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -5060,6 +5791,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -5106,6 +5843,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -5150,6 +5893,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -5196,6 +5945,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -5241,6 +5996,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -5285,6 +6046,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -5337,6 +6104,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -5382,6 +6155,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -5429,6 +6208,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -5474,6 +6259,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -5521,6 +6312,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -5566,6 +6363,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -5613,6 +6416,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -5658,6 +6467,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -5705,6 +6520,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -5750,6 +6571,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -5797,6 +6624,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -5842,6 +6675,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -5889,6 +6728,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -5934,6 +6779,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -5981,6 +6832,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -6026,6 +6883,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -6073,6 +6936,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -6118,6 +6987,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -6165,6 +7040,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -6210,6 +7091,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -6257,6 +7144,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -6302,6 +7195,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -6349,6 +7248,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -6394,6 +7299,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -6441,6 +7352,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -6486,6 +7403,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -6533,6 +7456,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -6578,6 +7507,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -6625,6 +7560,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -6670,6 +7611,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -6717,6 +7664,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -6762,6 +7715,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -6809,6 +7768,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -6854,6 +7819,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -6901,6 +7872,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -6946,6 +7923,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -6993,6 +7976,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -7038,6 +8027,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -7085,6 +8080,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -7130,6 +8131,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -7177,6 +8184,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -7222,6 +8235,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -7269,6 +8288,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -7314,6 +8339,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -7361,6 +8392,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -7405,6 +8442,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -7452,6 +8495,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -7497,6 +8546,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -7544,6 +8599,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -7590,6 +8651,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -7635,6 +8702,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -7686,6 +8759,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -7730,6 +8809,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -7776,6 +8861,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -7820,6 +8911,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -7866,6 +8963,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -7910,6 +9013,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -7956,6 +9065,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -8000,6 +9115,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -8046,6 +9167,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -8090,6 +9217,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -8136,6 +9269,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -8180,6 +9319,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -8226,6 +9371,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -8270,6 +9421,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -8316,6 +9473,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -8360,6 +9523,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -8406,6 +9575,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -8450,6 +9625,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -8496,6 +9677,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -8540,6 +9727,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -8586,6 +9779,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -8630,6 +9829,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -8676,6 +9881,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -8720,6 +9931,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -8766,6 +9983,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -8810,6 +10033,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -8856,6 +10085,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -8900,6 +10135,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -8946,6 +10187,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -8990,6 +10237,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -9036,6 +10289,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -9080,6 +10339,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -9126,6 +10391,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -9170,6 +10441,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -9216,6 +10493,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -9260,6 +10543,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -9306,6 +10595,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -9350,6 +10645,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -9396,6 +10697,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -9440,6 +10747,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -9486,6 +10799,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -9530,6 +10849,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -9576,6 +10901,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -9620,6 +10951,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -9666,6 +11003,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -9710,6 +11053,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -9756,6 +11105,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -9800,6 +11155,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -9846,6 +11207,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -9891,6 +11258,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -9900,7 +11273,7 @@
       ]
     },
     {
-      "description": "Simlayer: W = Cmd+Option (D/F/J/K → Cmd+Opt+Arrows for tab switching)",
+      "description": "Simlayer: W = Cmd+Option (D/F/J/K \u2192 Cmd+Opt+Arrows for tab switching)",
       "manipulators": [
         {
           "type": "basic",
@@ -9941,6 +11314,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -9988,6 +11367,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -10034,6 +11419,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -10079,6 +11470,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -10129,6 +11526,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -10181,6 +11584,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -10227,6 +11636,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -10272,6 +11687,12 @@
                   "product_id": 6
                 }
               ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
+              ]
             }
           ],
           "parameters": {
@@ -10316,6 +11737,12 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],

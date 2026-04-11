@@ -1,6 +1,6 @@
 # Keychron Q1 / Keyboardio Model 100 — Layout Reference (Simlayer Edition)
 
-Enabled on the Keychron Q1 and the Keyboardio Model 100 for testing.
+Enabled on the Keychron Q1 and the Keyboardio Model 100 for testing, except when Ghostty is frontmost.
 
 All triggers are letter-first simlayers unless noted otherwise.
 
@@ -20,6 +20,10 @@ If you tap the trigger key alone, it types the normal letter.
 - `D + F` -> `Backspace`
 - `K + L` -> `Enter`
 - `F + G` -> `Escape`
+
+Chat-app exception:
+
+- `K + L` is blocked in Beeper, WhatsApp, Signal, and Codex.
 
 ## Caps Lock
 
