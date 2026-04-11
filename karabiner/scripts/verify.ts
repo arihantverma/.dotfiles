@@ -11,10 +11,10 @@ const actual = JSON.parse(readFileSync(ASSET_PATH, 'utf8')) as typeof expected
 
 assert.equal(expected.title, TITLE)
 assert.deepEqual(actual, expected)
-assert.equal(actual.rules.length, 17)
+assert.equal(actual.rules.length, 18)
 
 const manipulators = actual.rules.flatMap((rule) => rule.manipulators)
-assert.equal(manipulators.length, 229)
+assert.equal(manipulators.length, 228)
 
 const deviceCondition = {
   type: 'device_if',
@@ -26,16 +26,20 @@ const ghosttyCondition = {
 }
 
 let appScopedConditions = 0
+let ghosttyExceptions = 0
 for (const manipulator of manipulators) {
   const conditions = manipulator.conditions ?? []
   assert(conditions.some((condition) => JSON.stringify(condition) === JSON.stringify(deviceCondition)))
-  assert(conditions.some((condition) => JSON.stringify(condition) === JSON.stringify(ghosttyCondition)))
+  const hasGhostty = conditions.some((condition) => JSON.stringify(condition) === JSON.stringify(ghosttyCondition))
+  if (!hasGhostty) ghosttyExceptions += 1
   appScopedConditions += conditions.filter((condition) => condition.type === 'frontmost_application_if').length
 }
 
 assert.equal(appScopedConditions, 6)
+assert.equal(ghosttyExceptions, 3)
 assert(actual.rules.some((rule) => rule.description === 'Caps Lock dual-role: tap Esc, hold Cmd'))
-assert(actual.rules.some((rule) => rule.description === 'Combos: H+J=Tab, J+K=Space, D+F=Backspace, K+L=Enter, F+G=Esc'))
+assert(actual.rules.some((rule) => rule.description === 'Combos: J+K=Space, D+F=Backspace, K+L=Enter, F+G=Esc'))
+assert(actual.rules.some((rule) => rule.description === 'Ghostty-enabled base combos: J+K, D+F, K+L'))
 assert(actual.rules.some((rule) => rule.description === 'Simlayer: S = Navigation'))
 assert(actual.rules.some((rule) => rule.description === 'Simlayer: R = Symbols/F-keys'))
 assert(actual.rules.some((rule) => rule.description === 'Simlayer: E = Cmd'))
@@ -50,3 +54,4 @@ console.log(`Title: ${actual.title}`)
 console.log(`Rules: ${actual.rules.length}`)
 console.log(`Manipulators: ${manipulators.length}`)
 console.log(`App-scoped conditions: ${appScopedConditions}`)
+console.log(`Ghostty exceptions: ${ghosttyExceptions}`)

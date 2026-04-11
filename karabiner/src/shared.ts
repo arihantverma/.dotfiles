@@ -71,12 +71,14 @@ export function noneEvent(): ToEvent {
   return toNone()
 }
 
-export function sharedConditions(extra: Array<ConditionBuilder> = []): ConditionBuilder[] {
-  return [ifDevice([...DEVICES]), ...extra, ifApp(APPS.ghostty).unless()]
+export function sharedConditions(extra: Array<ConditionBuilder> = [], excludeGhostty = true): ConditionBuilder[] {
+  return excludeGhostty
+    ? [ifDevice([...DEVICES]), ...extra, ifApp(APPS.ghostty).unless()]
+    : [ifDevice([...DEVICES]), ...extra]
 }
 
-export function scopedRule(description: string, extra: Array<ConditionBuilder> = []): RuleBuilder {
-  return rule(description, ...sharedConditions(extra))
+export function scopedRule(description: string, extra: Array<ConditionBuilder> = [], excludeGhostty = true): RuleBuilder {
+  return rule(description, ...sharedConditions(extra, excludeGhostty))
 }
 
 export function simultaneousManipulator(

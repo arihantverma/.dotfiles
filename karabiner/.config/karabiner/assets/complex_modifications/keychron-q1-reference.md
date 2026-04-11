@@ -1,6 +1,6 @@
 # Keychron Q1 / Keyboardio Model 100 — Layout Reference (Simlayer Edition)
 
-Enabled on the Keychron Q1 and the Keyboardio Model 100 for testing, except when Ghostty is frontmost.
+Enabled on the Keychron Q1 and the Keyboardio Model 100 for testing. In Ghostty, only `D + F`, `J + K`, and `K + L` remain enabled.
 
 All triggers are letter-first simlayers unless noted otherwise.
 
@@ -15,7 +15,6 @@ If you tap the trigger key alone, it types the normal letter.
 
 ## Base combos (order-insensitive, 70ms)
 
-- `H + J` -> `Tab`
 - `J + K` -> `Space`
 - `D + F` -> `Backspace`
 - `K + L` -> `Enter`

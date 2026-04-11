@@ -201,17 +201,17 @@
       ]
     },
     {
-      "description": "Combos: H+J=Tab, J+K=Space, D+F=Backspace, K+L=Enter, F+G=Esc",
+      "description": "Combos: J+K=Space, D+F=Backspace, K+L=Enter, F+G=Esc",
       "manipulators": [
         {
           "type": "basic",
           "from": {
             "simultaneous": [
               {
-                "key_code": "h"
+                "key_code": "f"
               },
               {
-                "key_code": "j"
+                "key_code": "g"
               }
             ],
             "simultaneous_options": {
@@ -223,7 +223,7 @@
           },
           "to": [
             {
-              "key_code": "tab"
+              "key_code": "escape"
             }
           ],
           "conditions": [
@@ -250,7 +250,12 @@
           "parameters": {
             "basic.simultaneous_threshold_milliseconds": 70
           }
-        },
+        }
+      ]
+    },
+    {
+      "description": "Ghostty-enabled base combos: J+K, D+F, K+L",
+      "manipulators": [
         {
           "type": "basic",
           "from": {
@@ -286,12 +291,6 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
-              ]
-            },
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": [
-                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],
@@ -335,12 +334,6 @@
                   "product_id": 6
                 }
               ]
-            },
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": [
-                "^com\\.mitchellh\\.ghostty$"
-              ]
             }
           ],
           "parameters": {
@@ -382,60 +375,6 @@
                   "vendor_id": 13462,
                   "product_id": 6
                 }
-              ]
-            },
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": [
-                "^com\\.mitchellh\\.ghostty$"
-              ]
-            }
-          ],
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 70
-          }
-        },
-        {
-          "type": "basic",
-          "from": {
-            "simultaneous": [
-              {
-                "key_code": "f"
-              },
-              {
-                "key_code": "g"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "insensitive",
-              "key_up_order": "insensitive",
-              "detect_key_down_uninterruptedly": true,
-              "key_up_when": "any"
-            }
-          },
-          "to": [
-            {
-              "key_code": "escape"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "device_if",
-              "identifiers": [
-                {
-                  "vendor_id": 13364,
-                  "product_id": 263
-                },
-                {
-                  "vendor_id": 13462,
-                  "product_id": 6
-                }
-              ]
-            },
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": [
-                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ],

@@ -13,12 +13,14 @@ import {
   type Mapping,
 } from './shared.js'
 
-const baseComboRule = scopedRule('Combos: H+J=Tab, J+K=Space, D+F=Backspace, K+L=Enter, F+G=Esc').manipulators([
-  simultaneousManipulator('h', 'j', keyEvent('tab'), BASE_COMBO_THRESHOLD, INSENSITIVE_SIMULTANEOUS_OPTIONS),
+const baseComboRule = scopedRule('Combos: J+K=Space, D+F=Backspace, K+L=Enter, F+G=Esc').manipulators([
+  simultaneousManipulator('f', 'g', keyEvent('escape'), BASE_COMBO_THRESHOLD, INSENSITIVE_SIMULTANEOUS_OPTIONS),
+])
+
+const ghosttyBaseComboRule = scopedRule('Ghostty-enabled base combos: J+K, D+F, K+L', [], false).manipulators([
   simultaneousManipulator('j', 'k', keyEvent('spacebar'), BASE_COMBO_THRESHOLD, INSENSITIVE_SIMULTANEOUS_OPTIONS),
   simultaneousManipulator('d', 'f', keyEvent('delete_or_backspace'), BASE_COMBO_THRESHOLD, INSENSITIVE_SIMULTANEOUS_OPTIONS),
   simultaneousManipulator('k', 'l', keyEvent('return_or_enter'), BASE_COMBO_THRESHOLD, INSENSITIVE_SIMULTANEOUS_OPTIONS),
-  simultaneousManipulator('f', 'g', keyEvent('escape'), BASE_COMBO_THRESHOLD, INSENSITIVE_SIMULTANEOUS_OPTIONS),
 ])
 
 const capsRecoveryRule = scopedRule('Caps Lock recovery: Left/Right Shift + Caps Lock = real Caps Lock toggle').manipulators([
@@ -166,6 +168,7 @@ export const rules: RuleBuilder[] = [
   capsDualRoleRule,
   chatBlockRule,
   baseComboRule,
+  ghosttyBaseComboRule,
   layerRule('Simlayer: S = Navigation', 's', sMappings),
   layerRule('Simlayer: R = Symbols/F-keys', 'r', rMappings),
   blockRule('Browser-only block: E+D', 'e', 'd', [...APPS.browsers]),

@@ -22,7 +22,7 @@ This directory is the source-of-truth for the Model 100 Karabiner layout.
 - It does not write to the live `~/.config/karabiner/karabiner.json`.
 
 ## Current architecture
-- Base combos: `HJ=Tab`, `JK=Space`, `DF=Backspace`, `KL=Enter`, `FG=Esc`
+- Base combos: `JK=Space`, `DF=Backspace`, `KL=Enter`, `FG=Esc`
 - Caps Lock: tap `Esc`, hold `Cmd`
 - Simlayers:
   - `S` = navigation/editing
@@ -34,7 +34,7 @@ This directory is the source-of-truth for the Model 100 Karabiner layout.
   - `C` = focused Option (`C+D -> Opt+D`)
   - `X` = focused Ctrl+Cmd
 - Devices: Keychron Q1 and Keyboardio Model 100
-- Global app exclusion: Ghostty
+- Ghostty: all custom rules stay excluded except the base combos `DF`, `JK`, and `KL`
 
 ## Required workflow after layout changes
 1. Edit `src/` files.
