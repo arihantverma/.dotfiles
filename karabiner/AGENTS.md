@@ -27,7 +27,7 @@ This directory is the source-of-truth for the Model 100 Karabiner layout.
 - Simlayers:
   - `S` = navigation/editing
   - `R` = symbols/F-keys
-  - `E` = Cmd passthrough with a few remaps/blocks
+  - `E` = Cmd passthrough with a few remaps/blocks, including a universal block on `E+M`
   - `Q` = Cmd+Shift passthrough with `Q+U -> Cmd+U`
   - `Z` = Ctrl passthrough
   - `W` = focused Cmd+Option arrows

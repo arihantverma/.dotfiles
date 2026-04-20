@@ -5753,10 +5753,7 @@
           },
           "to": [
             {
-              "key_code": "m",
-              "modifiers": [
-                "left_command"
-              ]
+              "key_code": "vk_none"
             }
           ],
           "conditions": [

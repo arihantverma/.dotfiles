@@ -113,6 +113,7 @@ Common examples:
 
 - `E + U` -> Select all
 - `E + A` -> blocked
+- `E + M` -> blocked
 - `E + R` -> blocked
 - `E + C` -> Copy
 - `E + V` -> Paste

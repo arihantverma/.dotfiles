@@ -125,6 +125,7 @@ const zKeys = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'b', 'backslash
 
 const eMappings = passthroughMappings(eKeys, ['left_command'], {
   a: noneEvent(),
+  m: noneEvent(),
   r: noneEvent(),
   u: keyEvent('a', ['left_command']),
 })
