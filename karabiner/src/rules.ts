@@ -128,6 +128,7 @@ const eMappings = passthroughMappings(eKeys, ['left_command'], {
   m: noneEvent(),
   r: noneEvent(),
   u: keyEvent('a', ['left_command']),
+  w: noneEvent(),
 })
 
 const qMappings = passthroughMappings(qKeys, ['left_command', 'left_shift'], {

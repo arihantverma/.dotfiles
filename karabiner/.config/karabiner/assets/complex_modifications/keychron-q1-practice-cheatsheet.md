@@ -1,7 +1,7 @@
 # Keychron Q1 Practice Cheatsheet (Current Config)
 
 ## Core Rules
-- Enabled on Keychron Q1 and Keyboardio Model 100 for testing; in Ghostty `DF`, `JK`, `KL`, `S+D/F/J/K`, and approved `R` coding symbols stay enabled
+- Enabled on Keychron Q1 and Keyboardio Model 100; in Ghostty `DF`, `JK`, `KL`, `S+D/F/J/K`, and approved `R` coding symbols stay enabled
 - `Caps`: tap `Esc`, hold `Cmd`
 - Simlayer use: hold trigger, then press target key
 - Simlayer timing: mostly `50ms`
@@ -46,7 +46,7 @@
 ## Modifier Layers
 | Layer | Behavior | Examples |
 |---|---|---|
-| `E` | Mostly `Cmd + key`, with a few remaps/blocks | `E+U` select all, `E+A/E+M/E+R` blocked, `E+C` copy, `E+V` paste, `E+W` close tab, `E+L` focus URL, `E+Tab` app switch, `E+D` blocked in browsers, `E+N` blocked in browsers + Scrivener |
+| `E` | Mostly `Cmd + key`, with a few remaps/blocks | `E+U` select all, `E+A/E+M/E+R/E+W` blocked, `E+C` copy, `E+V` paste, `E+W` close tab, `E+L` focus URL, `E+Tab` app switch, `E+D` blocked in browsers, `E+N` blocked in browsers + Scrivener |
 | `Q` | `Cmd+Shift + key` passthrough | `Q+P` command palette, `Q+F` global find, `Q+U` underline (`Cmd+U`) |
 | `Z` | `Ctrl + key` passthrough | `Z+C` interrupt, `Z+D` EOF, `Z+L` clear |
 

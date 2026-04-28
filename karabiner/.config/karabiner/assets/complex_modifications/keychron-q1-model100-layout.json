@@ -6665,10 +6665,7 @@
           },
           "to": [
             {
-              "key_code": "w",
-              "modifiers": [
-                "left_command"
-              ]
+              "key_code": "vk_none"
             }
           ],
           "conditions": [
