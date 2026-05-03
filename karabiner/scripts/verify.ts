@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { buildAsset } from '../src/config.js'
-import { APPS, ASSET_PATH, DEVICES, TITLE } from '../src/shared.js'
+import { APPS, APPLE_CAPS_DEVICES, ASSET_PATH, LAYOUT_DEVICES, TITLE } from '../src/shared.js'
 
 const expected = buildAsset() as {
   title: string
@@ -11,14 +11,18 @@ const actual = JSON.parse(readFileSync(ASSET_PATH, 'utf8')) as typeof expected
 
 assert.equal(expected.title, TITLE)
 assert.deepEqual(actual, expected)
-assert.equal(actual.rules.length, 20)
+assert.equal(actual.rules.length, 23)
 
 const manipulators = actual.rules.flatMap((rule) => rule.manipulators)
-assert.equal(manipulators.length, 245)
+assert.equal(manipulators.length, 249)
 
-const deviceCondition = {
+const layoutDeviceCondition = {
   type: 'device_if',
-  identifiers: [...DEVICES],
+  identifiers: [...LAYOUT_DEVICES],
+}
+const appleDeviceCondition = {
+  type: 'device_if',
+  identifiers: [...APPLE_CAPS_DEVICES],
 }
 const ghosttyCondition = {
   type: 'frontmost_application_unless',
@@ -29,7 +33,9 @@ let appScopedConditions = 0
 let ghosttyExceptions = 0
 for (const manipulator of manipulators) {
   const conditions = manipulator.conditions ?? []
-  assert(conditions.some((condition) => JSON.stringify(condition) === JSON.stringify(deviceCondition)))
+  const hasLayoutDevice = conditions.some((condition) => JSON.stringify(condition) === JSON.stringify(layoutDeviceCondition))
+  const hasAppleDevice = conditions.some((condition) => JSON.stringify(condition) === JSON.stringify(appleDeviceCondition))
+  assert(hasLayoutDevice || hasAppleDevice)
   const hasGhostty = conditions.some((condition) => JSON.stringify(condition) === JSON.stringify(ghosttyCondition))
   if (!hasGhostty) ghosttyExceptions += 1
   appScopedConditions += conditions.filter((condition) => condition.type === 'frontmost_application_if').length
@@ -37,6 +43,9 @@ for (const manipulator of manipulators) {
 
 assert.equal(appScopedConditions, 23)
 assert.equal(ghosttyExceptions, 20)
+assert(actual.rules.some((rule) => rule.description === 'Apple keyboards: Left/Right Shift + Caps Lock = real Caps Lock toggle'))
+assert(actual.rules.some((rule) => rule.description === 'Apple keyboards: Caps Lock dual-role: tap Esc, hold Cmd'))
+assert(actual.rules.some((rule) => rule.description === 'Apple keyboards: Left Command -> Caps Lock'))
 assert(actual.rules.some((rule) => rule.description === 'Caps Lock dual-role: tap Esc, hold Cmd'))
 assert(actual.rules.some((rule) => rule.description === 'Combos: J+K=Space, D+F=Backspace, K+L=Enter, F+G=Esc'))
 assert(actual.rules.some((rule) => rule.description === 'Ghostty-enabled base combos: J+K, D+F, K+L'))

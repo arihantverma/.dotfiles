@@ -33,7 +33,8 @@ This directory is the source-of-truth for the Model 100 Karabiner layout.
   - `W` = focused Cmd+Option arrows
   - `C` = focused Option (`C+D -> Opt+D`)
   - `X` = focused Ctrl+Cmd
-- Devices: Keychron Q1, Keyboardio Model 100, and Apple Magic Keyboard (vendor 76, product 800)
+- Full layout devices: Keychron Q1 and Keyboardio Model 100
+- Apple-only Caps/Command devices: built-in keyboard and Apple Magic Keyboard (vendor 76, product 800)
 - Ghostty: all custom rules stay excluded except base combos `DF`, `JK`, `KL`, `S+D/F/J/K` arrows, and the approved `R` coding symbols/operators
 
 ## Required workflow after layout changes

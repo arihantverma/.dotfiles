@@ -5,6 +5,7 @@ import {
   INSENSITIVE_SIMULTANEOUS_OPTIONS,
   SIMLAYER_THRESHOLD,
   STRICT_SIMULTANEOUS_OPTIONS,
+  appleCapsRule,
   keyEvent,
   noneEvent,
   passthroughMappings,
@@ -21,6 +22,47 @@ const ghosttyBaseComboRule = scopedRule('Ghostty-enabled base combos: J+K, D+F, 
   simultaneousManipulator('j', 'k', keyEvent('spacebar'), BASE_COMBO_THRESHOLD, INSENSITIVE_SIMULTANEOUS_OPTIONS),
   simultaneousManipulator('d', 'f', keyEvent('delete_or_backspace'), BASE_COMBO_THRESHOLD, INSENSITIVE_SIMULTANEOUS_OPTIONS),
   simultaneousManipulator('k', 'l', keyEvent('return_or_enter'), BASE_COMBO_THRESHOLD, INSENSITIVE_SIMULTANEOUS_OPTIONS),
+])
+
+const appleCapsRecoveryRule = appleCapsRule('Apple keyboards: Left/Right Shift + Caps Lock = real Caps Lock toggle').manipulators([
+  map({
+    key_code: 'caps_lock',
+    modifiers: {
+      mandatory: ['left_shift'],
+      optional: ['caps_lock'],
+    },
+  }).to(keyEvent('caps_lock')),
+  map({
+    key_code: 'caps_lock',
+    modifiers: {
+      mandatory: ['right_shift'],
+      optional: ['caps_lock'],
+    },
+  }).to(keyEvent('caps_lock')),
+])
+
+const appleCapsDualRoleRule = appleCapsRule('Apple keyboards: Caps Lock dual-role: tap Esc, hold Cmd').manipulators([
+  map({
+    key_code: 'caps_lock',
+    modifiers: {
+      optional: ['any'],
+    },
+  })
+    .to(keyEvent('left_command', undefined, { lazy: true }))
+    .toIfAlone(keyEvent('escape'))
+    .parameters({
+      'basic.to_if_alone_timeout_milliseconds': 200,
+      'basic.to_if_held_down_threshold_milliseconds': 130,
+    }),
+])
+
+const appleLeftCommandToCapsRule = appleCapsRule('Apple keyboards: Left Command -> Caps Lock').manipulators([
+  map({
+    key_code: 'left_command',
+    modifiers: {
+      optional: ['any'],
+    },
+  }).to(keyEvent('caps_lock')),
 ])
 
 const capsRecoveryRule = scopedRule('Caps Lock recovery: Left/Right Shift + Caps Lock = real Caps Lock toggle').manipulators([
@@ -196,6 +238,9 @@ function ghosttyLayerRule(description: string, trigger: string, mappings: Mappin
 }
 
 export const rules: RuleBuilder[] = [
+  appleCapsRecoveryRule,
+  appleCapsDualRoleRule,
+  appleLeftCommandToCapsRule,
   capsRecoveryRule,
   capsDualRoleRule,
   chatBlockRule,

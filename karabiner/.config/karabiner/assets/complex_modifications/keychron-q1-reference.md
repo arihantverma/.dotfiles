@@ -1,6 +1,6 @@
 # Keychron Q1 / Keyboardio Model 100 — Layout Reference (Simlayer Edition)
 
-Enabled on the Keychron Q1, the Keyboardio Model 100, and the Apple Magic Keyboard. In Ghostty, `D + F`, `J + K`, `K + L`, `S + D/F/J/K`, and the approved `R` coding symbols remain enabled.
+Full layout is enabled on the Keychron Q1 and the Keyboardio Model 100. Apple built-in and Magic keyboards only get the Caps/left-Command behavior. In Ghostty, `D + F`, `J + K`, `K + L`, `S + D/F/J/K`, and the approved `R` coding symbols remain enabled.
 
 All triggers are letter-first simlayers unless noted otherwise.
 
@@ -30,6 +30,14 @@ Chat-app exception:
 - Hold `Caps Lock` -> `Command`
 - `Left Shift + Caps Lock` -> real Caps Lock toggle
 - `Right Shift + Caps Lock` -> real Caps Lock toggle
+
+## Apple Keyboards Only
+
+- On Apple built-in and Magic keyboards:
+  - Tap `Caps Lock` -> `Escape`
+  - Hold `Caps Lock` -> `Command`
+  - `Left Command` -> `Caps Lock`
+  - `Right Command` stays unchanged
 
 ## Simlayer: S = Navigation Kernel
 

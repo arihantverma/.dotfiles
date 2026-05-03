@@ -1,8 +1,9 @@
 # Keychron Q1 Practice Cheatsheet (Current Config)
 
 ## Core Rules
-- Enabled on Keychron Q1, Keyboardio Model 100, and Apple Magic Keyboard; in Ghostty `DF`, `JK`, `KL`, `S+D/F/J/K`, and approved `R` coding symbols stay enabled
+- Full layout enabled on Keychron Q1 and Keyboardio Model 100; Apple built-in and Magic keyboards only get Caps/left-Command behavior
 - `Caps`: tap `Esc`, hold `Cmd`
+- Apple keyboards: `left_command -> caps_lock`
 - Simlayer use: hold trigger, then press target key
 - Simlayer timing: mostly `50ms`
 - Base combos (70ms): `JK=Space`, `DF=Backspace`, `KL=Enter`, `FG=Esc`

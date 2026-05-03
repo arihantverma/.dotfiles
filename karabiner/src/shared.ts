@@ -4,9 +4,13 @@ export const TITLE = 'Model 100 Hacker Layout for Keychron (Simlayer Edition)'
 export const DRY_RUN_PROFILE_NAME = 'model100-ts-dry-run'
 export const ASSET_PATH = '/Users/arihantverma/Code/po/.dotfiles/karabiner/.config/karabiner/assets/complex_modifications/keychron-q1-model100-layout.json'
 
-export const DEVICES = [
+export const LAYOUT_DEVICES = [
   { vendor_id: 13364, product_id: 263 },
   { vendor_id: 13462, product_id: 6 },
+] as const
+
+export const APPLE_CAPS_DEVICES = [
+  { is_keyboard: true, is_built_in_keyboard: true },
   { vendor_id: 76, product_id: 800 },
 ] as const
 
@@ -74,12 +78,20 @@ export function noneEvent(): ToEvent {
 
 export function sharedConditions(extra: Array<ConditionBuilder> = [], excludeGhostty = true): ConditionBuilder[] {
   return excludeGhostty
-    ? [ifDevice([...DEVICES]), ...extra, ifApp(APPS.ghostty).unless()]
-    : [ifDevice([...DEVICES]), ...extra]
+    ? [ifDevice([...LAYOUT_DEVICES]), ...extra, ifApp(APPS.ghostty).unless()]
+    : [ifDevice([...LAYOUT_DEVICES]), ...extra]
 }
 
 export function scopedRule(description: string, extra: Array<ConditionBuilder> = [], excludeGhostty = true): RuleBuilder {
   return rule(description, ...sharedConditions(extra, excludeGhostty))
+}
+
+export function appleCapsConditions(): ConditionBuilder[] {
+  return [ifDevice([...APPLE_CAPS_DEVICES]), ifApp(APPS.ghostty).unless()]
+}
+
+export function appleCapsRule(description: string): RuleBuilder {
+  return rule(description, ...appleCapsConditions())
 }
 
 export function simultaneousManipulator(
