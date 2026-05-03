@@ -7,6 +7,7 @@ export const ASSET_PATH = '/Users/arihantverma/Code/po/.dotfiles/karabiner/.conf
 export const DEVICES = [
   { vendor_id: 13364, product_id: 263 },
   { vendor_id: 13462, product_id: 6 },
+  { vendor_id: 76, product_id: 800 },
 ] as const
 
 export const APPS = {
