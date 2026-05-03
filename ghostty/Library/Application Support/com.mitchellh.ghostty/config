@@ -3,3 +3,4 @@ keybind = shift+enter=text:\n
 macos-titlebar-style = tabs
 theme = light:Flexoki Light,dark:Black Metal (Burzum)
 split-divider-color = #d4d4d4
+font-family = Zed Mono
