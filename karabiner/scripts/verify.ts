@@ -11,10 +11,10 @@ const actual = JSON.parse(readFileSync(ASSET_PATH, 'utf8')) as typeof expected
 
 assert.equal(expected.title, TITLE)
 assert.deepEqual(actual, expected)
-assert.equal(actual.rules.length, 23)
+assert.equal(actual.rules.length, 22)
 
 const manipulators = actual.rules.flatMap((rule) => rule.manipulators)
-assert.equal(manipulators.length, 249)
+assert.equal(manipulators.length, 247)
 
 const layoutDeviceCondition = {
   type: 'device_if',
@@ -43,7 +43,6 @@ for (const manipulator of manipulators) {
 
 assert.equal(appScopedConditions, 23)
 assert.equal(ghosttyExceptions, 20)
-assert(actual.rules.some((rule) => rule.description === 'Apple keyboards: Left/Right Shift + Caps Lock = real Caps Lock toggle'))
 assert(actual.rules.some((rule) => rule.description === 'Apple keyboards: Caps Lock dual-role: tap Esc, hold Cmd'))
 assert(actual.rules.some((rule) => rule.description === 'Apple keyboards: Left Command -> Caps Lock'))
 assert(actual.rules.some((rule) => rule.description === 'Caps Lock dual-role: tap Esc, hold Cmd'))

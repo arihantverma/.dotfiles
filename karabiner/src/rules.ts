@@ -24,23 +24,6 @@ const ghosttyBaseComboRule = scopedRule('Ghostty-enabled base combos: J+K, D+F, 
   simultaneousManipulator('k', 'l', keyEvent('return_or_enter'), BASE_COMBO_THRESHOLD, INSENSITIVE_SIMULTANEOUS_OPTIONS),
 ])
 
-const appleCapsRecoveryRule = appleCapsRule('Apple keyboards: Left/Right Shift + Caps Lock = real Caps Lock toggle').manipulators([
-  map({
-    key_code: 'caps_lock',
-    modifiers: {
-      mandatory: ['left_shift'],
-      optional: ['caps_lock'],
-    },
-  }).to(keyEvent('caps_lock')),
-  map({
-    key_code: 'caps_lock',
-    modifiers: {
-      mandatory: ['right_shift'],
-      optional: ['caps_lock'],
-    },
-  }).to(keyEvent('caps_lock')),
-])
-
 const appleCapsDualRoleRule = appleCapsRule('Apple keyboards: Caps Lock dual-role: tap Esc, hold Cmd').manipulators([
   map({
     key_code: 'caps_lock',
@@ -238,7 +221,6 @@ function ghosttyLayerRule(description: string, trigger: string, mappings: Mappin
 }
 
 export const rules: RuleBuilder[] = [
-  appleCapsRecoveryRule,
   appleCapsDualRoleRule,
   appleLeftCommandToCapsRule,
   capsRecoveryRule,

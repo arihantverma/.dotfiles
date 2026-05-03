@@ -38,6 +38,7 @@ Chat-app exception:
   - Hold `Caps Lock` -> `Command`
   - `Left Command` -> `Caps Lock`
   - `Right Command` stays unchanged
+  - `Shift + Caps Lock` does not toggle real Caps Lock
 
 ## Simlayer: S = Navigation Kernel
 

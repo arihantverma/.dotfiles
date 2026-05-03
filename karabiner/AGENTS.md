@@ -35,6 +35,7 @@ This directory is the source-of-truth for the Model 100 Karabiner layout.
   - `X` = focused Ctrl+Cmd
 - Full layout devices: Keychron Q1 and Keyboardio Model 100
 - Apple-only Caps/Command devices: built-in keyboard and Apple Magic Keyboard (vendor 76, product 800)
+- Apple-only behavior: `Caps` tap = `Esc`, hold = `Cmd`, `left_command -> caps_lock`, no Apple `Shift+Caps` recovery toggle
 - Ghostty: all custom rules stay excluded except base combos `DF`, `JK`, `KL`, `S+D/F/J/K` arrows, and the approved `R` coding symbols/operators
 
 ## Required workflow after layout changes
