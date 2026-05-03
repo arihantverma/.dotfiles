@@ -6,7 +6,7 @@
 -- install directory is added to runtimepath so parser files can be discovered.
 --------------------------------------------------------------------------------
 
-local parser_languages = "lua json html css javascript typescript tsx"
+local parser_languages = "astro lua json html css javascript typescript tsx"
 
 return {
   {
@@ -30,6 +30,7 @@ return {
       -- Start Treesitter only for the filetypes we actively use here.
       vim.api.nvim_create_autocmd("FileType", {
         pattern = {
+          "astro",
           "lua",
           "json",
           "jsonc",
