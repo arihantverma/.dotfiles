@@ -44,7 +44,7 @@ for (const manipulator of manipulators) {
 assert.equal(appScopedConditions, 23)
 assert.equal(ghosttyExceptions, 20)
 assert(actual.rules.some((rule) => rule.description === 'Apple keyboards: Caps Lock dual-role: tap Esc, hold Cmd'))
-assert(actual.rules.some((rule) => rule.description === 'Apple keyboards: Left Command -> Caps Lock'))
+assert(actual.rules.some((rule) => rule.description === 'Apple keyboards: Right Command -> Caps Lock'))
 assert(actual.rules.some((rule) => rule.description === 'Caps Lock dual-role: tap Esc, hold Cmd'))
 assert(actual.rules.some((rule) => rule.description === 'Combos: J+K=Space, D+F=Backspace, K+L=Enter, F+G=Esc'))
 assert(actual.rules.some((rule) => rule.description === 'Ghostty-enabled base combos: J+K, D+F, K+L'))

@@ -39,9 +39,9 @@ const appleCapsDualRoleRule = appleCapsRule('Apple keyboards: Caps Lock dual-rol
     }),
 ])
 
-const appleLeftCommandToCapsRule = appleCapsRule('Apple keyboards: Left Command -> Caps Lock').manipulators([
+const appleRightCommandToCapsRule = appleCapsRule('Apple keyboards: Right Command -> Caps Lock').manipulators([
   map({
-    key_code: 'left_command',
+    key_code: 'right_command',
     modifiers: {
       optional: ['any'],
     },
@@ -222,7 +222,7 @@ function ghosttyLayerRule(description: string, trigger: string, mappings: Mappin
 
 export const rules: RuleBuilder[] = [
   appleCapsDualRoleRule,
-  appleLeftCommandToCapsRule,
+  appleRightCommandToCapsRule,
   capsRecoveryRule,
   capsDualRoleRule,
   chatBlockRule,

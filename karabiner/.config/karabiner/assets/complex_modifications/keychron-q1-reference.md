@@ -36,8 +36,8 @@ Chat-app exception:
 - On Apple built-in and Magic keyboards:
   - Tap `Caps Lock` -> `Escape`
   - Hold `Caps Lock` -> `Command`
-  - `Left Command` -> `Caps Lock`
-  - `Right Command` stays unchanged
+  - `Right Command` -> `Caps Lock`
+  - `Left Command` stays unchanged
   - `Shift + Caps Lock` does not toggle real Caps Lock
 
 ## Simlayer: S = Navigation Kernel
